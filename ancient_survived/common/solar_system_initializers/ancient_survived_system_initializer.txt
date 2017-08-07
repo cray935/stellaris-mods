@@ -69,15 +69,15 @@ ancient_survived_system_initializer = {
 					set_building = "building_agri_processing_complex"
 					add_resource = {
 						resource = food
-						amount = 2
+						amount = 1
 						replace = yes
 					}						
 				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
-					set_building = "building_ancient_factory"
+					set_building = "building_agri_processing_complex"
 					add_resource = {
-						resource = minerals
+						resource = food
 						amount = 1
 						replace = yes
 					}							
@@ -96,7 +96,7 @@ ancient_survived_system_initializer = {
 					set_building = "building_ancient_factory"
 					add_resource = {
 						resource = minerals
-						amount = 1
+						amount = 2
 						replace = yes
 					}						
 				}			
@@ -117,6 +117,24 @@ ancient_survived_system_initializer = {
 					resource = engineering_research
 					amount = 1
 				}
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
