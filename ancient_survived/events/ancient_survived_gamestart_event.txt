@@ -26,7 +26,7 @@ planet_event = {
 	immediate = {
 		if = { 
 			limit = { 
-				owner = { 
+				owner = {
 					has_civic = civic_mechanists
 					is_ancient_survivor = yes
 				} 
@@ -39,8 +39,9 @@ planet_event = {
 							has_building = building_ancient_factory
 							has_building = building_agri_processing_complex
 						}
-						has_pop = no
-					}				
+						pop = { is_robot_pop = no }
+					}
+					kill_pop = yes
 					build_pop = {
 						name = buildable_robot_pop_1
 					}
@@ -79,8 +80,9 @@ planet_event = {
 							has_building = building_ancient_factory
 							has_building = building_agri_processing_complex
 						}
-						has_pop = no
+						pop = { NOT = { is_species = last_created } }
 					}
+					kill_pop = yes
 					create_pop = {
 						species = last_created
 						ethos = random
@@ -125,8 +127,9 @@ planet_event = {
 							has_building = building_ancient_factory
 							has_building = building_agri_processing_complex
 						}
-						has_pop = no
+						pop = { NOT = { is_species = last_created } }
 					}
+					kill_pop = yes
 					create_pop = {
 						species = last_created
 						ethos = random
