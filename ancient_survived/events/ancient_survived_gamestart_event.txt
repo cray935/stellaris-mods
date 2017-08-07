@@ -137,30 +137,5 @@ planet_event = {
 				}
 			}
 		}
-
-		if = {
-			limit = {
-				owner = {
-					has_authority = auth_hive_mind
-					is_ancient_survivor = yes
-				}
-			}
-			owner = {
-				modify_species = {
-					species = this
-					add_trait = trait_hive_mind
-					add_traits_at_start_of_list = yes
-				}
-				change_dominant_species = last_created_species
-			}
-		}
-
-		while = {
-			limit = { num_pops < 8 }
-			create_pop = {
-				species = owner_main_species
-				ethos = random
-			}
-		}
 	}
 }
