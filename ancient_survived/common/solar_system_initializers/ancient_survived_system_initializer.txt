@@ -1,0 +1,186 @@
+
+ancient_survived_system_initializer = {
+	
+	class = "rl_standard_stars"
+	asteroids_distance = 115
+	flags = { empire_home_system ancient_survived_system }
+	
+	usage = custom_empire
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	planet = {
+		count = { min = 0 max = 2 }
+		orbit_distance = 20
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 1
+		orbit_distance = 20
+		home_planet = yes
+		class = ideal_planet_class
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		tile_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_ancient_survived_capital"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_agri_processing_complex"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_dark_matter_power_plant"
+					add_resource = {
+						resource = energy
+						amount = 2
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_ancient_factory"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}						
+				}			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_ancient_survived_lab"	
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}
+				add_resource = {
+					resource = society_research
+					amount = 1
+				}
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+				}
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_ruins"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_ruins"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_ruins"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_stasis_zone"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_stasis_zone"
+				add_resource = {
+					resource = food
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_ancient_survived_stasis_zone"
+				add_resource = {
+					resource = minerals
+					amount = 2
+					replace = yes
+				}				
+			}			
+		}
+		
+		change_orbit = @base_moon_distance
+
+		moon = {
+			count = { min = 0 max = 1 }
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+}

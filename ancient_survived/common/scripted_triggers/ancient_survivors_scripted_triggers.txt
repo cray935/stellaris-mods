@@ -1,0 +1,9 @@
+
+# Checks if the current scope's country is an ancient survivor
+is_ancient_survivor = {
+	capital_scope = {
+		solar_system = {
+			has_star_flag = ancient_survived_system
+		}
+	}
+}

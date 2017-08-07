@@ -1,0 +1,21 @@
+
+namespace = ancient_survived_country_event
+
+# Initializes the country, gives techs and stuff
+country_event = {
+	id = ancient_survived_country_event.100
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		disable_precursor_events = yes
+		
+		give_all_common_techs = yes
+		give_ancient_building_techs = yes
+		
+		add_energy = 5000
+		add_minerals = 5000
+		add_food = 5000
+	}
+}

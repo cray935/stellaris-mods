@@ -1,0 +1,15 @@
+﻿l_english:
+ 
+ ancient_survived_system_initializer_NAME:0 "Ancient Sanctuary"
+ ancient_survived_system_initializer_DESC:0 "Reguge system of a fallen civilisation. Stasis chambers on the only habitable planet keep the otherwise extinct species alive."
+ 
+ building_ancient_survived_lab:0 "Research Matrix"
+ building_ancient_survived_lab_desc:0 "A backup system of a former huge research network with plenty of data from previous scientific break throughs."
+ building_ancient_survived_capital:0 "Reboot Project"
+ building_ancient_survived_capital_desc:0 "This administration building was constructed for the redevelopment of a civilisation. It controls the processes necessary for rebooting society and supports the new government with their upcomming challenges."
+ 
+ tb_ancient_survived_ruins:0 "$tb_city_ruins$"
+ tb_ancient_survived_ruins_desc:0 "$tb_city_ruins_desc$"
+ tb_ancient_survived_stasis_zone:0 "£blocker Stasis Chambers"
+ tb_ancient_survived_stasis_zone_desc:0 "These defect stasis chambers provided big service for survival of an advanced species in the past. But now they are unusable and have to be removed so the landscape can be worked on again."
+ 

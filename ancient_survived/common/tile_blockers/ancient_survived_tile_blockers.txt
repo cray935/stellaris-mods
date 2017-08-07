@@ -1,0 +1,32 @@
+#
+#	Special blockers for Ancient Survivor Gamestart
+#
+
+tb_ancient_survived_ruins = {
+	picture = tb_city_ruins
+	time = 200
+	cost = {
+		energy = 200
+		minerals = 200
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_ancient_survived_stasis_zone = {
+	time = 200
+	cost = {
+		energy = 200
+		minerals = 200
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}

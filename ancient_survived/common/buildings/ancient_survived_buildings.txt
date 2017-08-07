@@ -1,0 +1,67 @@
+#
+#	Custom buildings for Ancient Survivor Gamestart
+#
+
+building_ancient_survived_lab = {
+	
+	is_listed = no
+	event_building = yes
+	icon = "building_psi_corps"
+	
+	allow = {
+		always = no
+	}
+
+	produced_resources = {
+		engineering_research = 4
+		physics_research = 4
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 4
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+building_ancient_survived_capital = {
+
+	is_listed = no
+	event_building = yes
+	icon = "building_akx_worm_1"
+	
+	allow = {
+		always = no
+	}
+		
+	produced_resources = {
+		energy = 6
+		unity = 3
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			has_tradition = tr_expansion_colonization_fever
+			resources = {
+				unity = 1
+			}
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+		tile_building_resource_food_add = 1
+		tile_building_resource_energy_add = 1
+	}
+	
+	ai_special_building = yes
+	
+	ai_weight = {
+		weight = 10000
+	}
+}

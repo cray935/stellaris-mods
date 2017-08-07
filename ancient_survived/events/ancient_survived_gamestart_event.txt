@@ -1,0 +1,18 @@
+
+namespace = ancient_survived_gamestart_event
+
+event = {
+	id = ancient_survived_gamestart_event.100
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ancient_survivor = yes
+			}
+			country_event = { id = ancient_survived_country_event.100 }
+		}
+	}
+}

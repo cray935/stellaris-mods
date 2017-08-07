@@ -1,0 +1,15 @@
+﻿l_german:
+ 
+ ancient_survived_system_initializer_NAME:0 "Uralte Zuflucht"
+ ancient_survived_system_initializer_DESC:0 "Ein System, welches als Zuflucht einer gefallenen Zivilisation dient. Stasiskammern auf dem bewohnbaren Planet halten eine ansonsten ausgestorbene Spezies am Leben."
+ 
+ building_ancient_survived_lab:0 "Forschungsmatrix"
+ building_ancient_survived_lab_desc:0 "Ein Backupsystem eines ehemals riesigen Forschungsnetwerks mit einer Vielzahl von Daten früheren wissenschaftlichen Durchbrüchen."
+ building_ancient_survived_capital:0 "Neustart Projekt"
+ building_ancient_survived_capital_desc:0 "Dieses Verwaltungsgebäude wurde für den Wiederaufbau einer Zivilisation erbaut. Es steuert die Prozesse, die für einen Neubeginn notwendig sind und unterstützt die neue Regierung bei ihren bevorstehenden Herausforderungen."
+ 
+ tb_ancient_survived_ruins:0 "$tb_city_ruins$"
+ tb_ancient_survived_ruins_desc:0 "$tb_city_ruins_desc$"
+ tb_ancient_survived_stasis_zone:0 "£blocker Stasiskammern"
+ tb_ancient_survived_stasis_zone_desc:0 "Diese defekten Stasiskammern haben einst großartige Dienste für das Überleben einer fortschrittlichen Spezies geleistet. Nun sind sie aber unbrauchbar und müssen entfernt werden, damit das Land wieder bewirtschaftet werden kann."
+ 

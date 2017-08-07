@@ -1,0 +1,6 @@
+
+on_game_start = {
+	events = {
+		ancient_survived_gamestart_event.100
+	}
+}

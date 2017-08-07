@@ -1,0 +1,5 @@
+changelog 1.0.0
+- init at stellaris version 1.6.2
+- custom starting system
+- no precursor events for ancient survivors (maybe later a custom one)
+- german & english localisations
