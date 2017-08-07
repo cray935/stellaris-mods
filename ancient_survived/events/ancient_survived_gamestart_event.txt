@@ -16,3 +16,148 @@ event = {
 		}
 	}
 }
+
+planet_event = {
+	id = ancient_survived_gamestart_event.110
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { 
+			limit = { 
+				owner = { 
+					has_civic = civic_mechanists
+					is_ancient_survivor = yes
+				} 
+			}
+			while = {
+				count = 4
+				random_tile = {
+					limit = {
+						OR = {
+							has_building = building_ancient_factory
+							has_building = building_agri_processing_complex
+						}
+						has_pop = no
+					}				
+					build_pop = {
+						name = buildable_robot_pop_1
+					}
+				}
+			}
+		}
+
+		if = { 
+			limit = { 
+				owner = { 
+					has_civic = civic_syncretic_evolution
+					capital_scope = { NOT = { has_planet_flag = planet_earth } }
+					is_ancient_survivor = yes
+				}
+			}
+			create_species = {
+				traits = {
+					trait = trait_presentient_proles
+					trait = trait_strong
+				}
+				homeworld = this
+			}
+			owner = {
+				last_created_species = {
+					set_citizenship_type = {
+						country = prev
+						type = citizenship_slavery
+					}
+				}
+			}
+			while = {
+				count = 4
+				random_tile = {
+					limit = {
+						OR = {
+							has_building = building_ancient_factory
+							has_building = building_agri_processing_complex
+						}
+						has_pop = no
+					}
+					create_pop = {
+						species = last_created
+						ethos = random
+					}					
+				}
+			}
+		}
+
+		if = { 
+			limit = { 
+				owner = { 
+					has_civic = civic_syncretic_evolution
+					capital_scope = { has_planet_flag = planet_earth }
+					is_ancient_survivor = yes
+				}
+			}
+			create_species = {
+				name = "NAME_Neo-Chimp"
+				plural = "NAME_Neo-Chimps"
+				adjective = "NAME_Neo-Chimp"
+				class = "MAM"
+				portrait = pre_mam13
+				traits = {
+					trait = trait_presentient_proles
+					trait = trait_strong
+				}
+				homeworld = this
+			}
+			owner = {
+				last_created_species = {
+					set_citizenship_type = {
+						country = prev
+						type = citizenship_slavery
+					}
+				}
+			}
+			while = {
+				count = 4
+				random_tile = {
+					limit = {
+						OR = {
+							has_building = building_ancient_factory
+							has_building = building_agri_processing_complex
+						}
+						has_pop = no
+					}
+					create_pop = {
+						species = last_created
+						ethos = random
+					}					
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_authority = auth_hive_mind
+					is_ancient_survivor = yes
+				}
+			}
+			owner = {
+				modify_species = {
+					species = this
+					add_trait = trait_hive_mind
+					add_traits_at_start_of_list = yes
+				}
+				change_dominant_species = last_created_species
+			}
+		}
+
+		while = {
+			limit = { num_pops < 8 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+}
