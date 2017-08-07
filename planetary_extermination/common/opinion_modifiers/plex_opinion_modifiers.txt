@@ -1,0 +1,38 @@
+# Opinions about Exterminatus Policy
+plex_opinion_policy_planetary_extermination = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -15
+			FROM = { has_policy_flag = plex_allow_extermination }
+		}
+		
+		modifier = {
+			add = -5
+			has_ethic = "ethic_pacifist"
+			FROM = { has_policy_flag = plex_allow_extermination }
+		}
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_pacifist"
+			FROM = { has_policy_flag = plex_allow_extermination }
+		}
+	}
+}
+
+# Opinions about doing the Exterminatus
+plex_opinion_command_exterminatus = {
+	opinion = {
+		base = -20
+	}
+	
+	min = -300
+	
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}

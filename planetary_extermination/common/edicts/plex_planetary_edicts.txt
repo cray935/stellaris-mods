@@ -1,0 +1,35 @@
+##########################################################################
+# Planet edicts
+##########################################################################
+
+# Variables:
+#  name, the name of the edict, also serves as localisation key.
+#  influence_cost, the base influence cost of activating the edict.
+#  potential, planet or country trigger to decide whether the edict should be shown.
+#  allow, planet or country trigger to decide if whether this edict can be activated.
+#  effect, an effect that is executed when this trigger activates.
+#  prerequisites, tech requirements for this trigger.
+#  ai_will_do, determines AI scoring for edict
+#  modifier, a list of modifiers
+#  length, number of days the trigger is active.
+
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+# Prepares planet for Exterminatus
+planet_edict = {
+	name = "plex_exterminatus"
+	influence_cost = 0
+	length = 0
+	
+	potential = {
+		owner = {
+			has_policy_flag = plex_allow_extermination
+		}
+		NOT = { has_planet_flag = plex_finished_exterminatus }
+	}
+	
+	effect = {
+		set_planet_flag = plex_prepare_exterminatus
+	}
+}

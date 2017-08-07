@@ -1,0 +1,32 @@
+
+plex_planetary_extermination = {
+
+	potential = {
+		is_ai = no
+	}
+	
+	option = {
+		name = "plex_planetary_extermination_forbidden"
+		
+		policy_flags = {
+		}
+
+	}
+	
+	option = {
+		name = "plex_planetary_extermination_allowed"
+		
+		policy_flags = {
+			plex_allow_extermination
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_hive_mind"
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+}
