@@ -1,0 +1,167 @@
+# ########################################################
+# Observation Station Missions for Primitive Advance
+# ########################################################
+
+namespace = len_advance_society
+
+# Stone Age
+country_event = {
+	id = len_advance_society.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.30 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Bronze Age
+country_event = {
+	id = len_advance_society.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.20 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Iron Age
+country_event = {
+	id = len_advance_society.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.22 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Late medieval Age
+country_event = {
+	id = len_advance_society.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.24 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Renaissance
+country_event = {
+	id = len_advance_society.5
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.26 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Steam Age
+country_event = {
+	id = len_advance_society.6
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.28 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Industrial Age
+country_event = {
+	id = len_advance_society.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.10 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Machine Age
+country_event = {
+	id = len_advance_society.8
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.12 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}
+
+# Atomic Age
+country_event = {
+	id = len_advance_society.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				remove_country_flag = recently_advanced
+				country_event = { id = primitive.14 }
+			}
+			observation_outpost = { add_mission_progress = -1 }
+		}
+	}
+}

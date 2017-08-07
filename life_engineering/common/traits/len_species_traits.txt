@@ -1,0 +1,62 @@
+
+len_trait_engineered = {
+	cost = -3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_biology.dds"
+	
+	initial = no
+	modification = no
+	randomized = no
+}
+
+len_trait_life_engineering_unit = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_natural_sociologists.dds"
+	
+	initial = no
+	randomized = no
+	modification = no
+	forced_happiness = yes
+	
+	modifier = {
+		tile_resource_engineering_research_mult = -1
+		tile_resource_physics_research_mult = -1
+		tile_resource_society_research_mult = 1
+		tile_resource_unity_mult = -1
+		tile_resource_energy_mult = -1
+		tile_resource_minerals_mult = -1
+	}
+}
+
+len_trait_engineered_scourge = {
+	cost = 0
+	initial = no
+	modification = yes
+	randomized = no
+	forced_happiness = yes
+	
+	modifier = {
+		tile_resource_minerals_mult = -1
+		tile_resource_food_mult = -1
+		tile_resource_unity_mult = -1
+		tile_resource_energy_mult = -1
+		tile_resource_physics_research_mult = -1
+		tile_resource_engineering_research_mult = -1
+		tile_resource_society_research_mult = -1
+	}
+}
+
+len_trait_promethean = {
+	cost = 4
+	initial = no
+	modification = no
+	randomized = no
+	
+	modifier = {
+		tile_resource_engineering_research_mult = 0.10
+		tile_resource_physics_research_mult = 0.10
+		tile_resource_society_research_mult = 0.10
+		pop_environment_tolerance = 0.10
+		leader_age = 20
+		leader_skill_levels = 1
+	}
+}

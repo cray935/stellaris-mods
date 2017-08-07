@@ -1,0 +1,488 @@
+
+######################## Create Species ##########################################
+#
+# Some effects only work in planet scope. 
+# The current planet will be the homeworld of the species created.
+#
+##################################################################################
+
+len_create_species = {
+	if = {
+		limit = { has_planet_flag = len_species_random }
+		len_create_random = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_mam }
+		len_create_mam = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_rep }
+		len_create_rep = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_avi }
+		len_create_avi = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_art }
+		len_create_art = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_mol }
+		len_create_mol = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_fun }
+		len_create_fun = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_plant }
+		len_create_plant = yes
+	}
+	if = {
+		limit = { has_planet_flag = len_species_hum }
+		len_create_hum = yes
+	}
+	
+	len_cleanup_species_flags = yes
+	
+	last_created_species = { save_global_event_target_as = len_species }
+	save_global_event_target_as = len_species_planet
+}
+
+len_create_random = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = random
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = random
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = random
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_mam = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = MAM
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = MAM
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = MAM
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_rep = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = REP
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = REP
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = REP
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_avi = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = AVI
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = AVI
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = AVI
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_art = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = ART
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = ART
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = ART
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_fun = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = FUN
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = FUN
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = FUN
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_mol = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = MOL
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = MOL
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = MOL
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+# (!) Do not use this if player does not have plant dlc.
+len_create_plant = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = PLANT
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = PLANT
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = PLANT
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_create_hum = {
+	if = {
+		limit = { has_planet_flag = len_species_sentient }
+		
+		if = {
+			limit = { has_planet_flag = len_species_random_traits }
+			
+			create_species = {
+				name = random
+				class = HUM
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_traits
+				}
+			}
+			
+			else = {
+				create_species = {
+					name = random
+					class = HUM
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = len_trait_engineered
+					}
+				}
+			}
+		}
+		
+		else = {
+			create_species = {
+				name = random
+				class = HUM
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = len_trait_engineered
+					trait = random_presentient_trait
+				}
+				sentient = no
+			}
+		}
+	}
+}
+
+len_cleanup_species_flags = {
+	remove_planet_flag = len_species_sentient
+	remove_planet_flag = len_species_random_traits
+	remove_planet_flag = len_species_random
+	remove_planet_flag = len_species_mam
+	remove_planet_flag = len_species_rep
+	remove_planet_flag = len_species_avi
+	remove_planet_flag = len_species_art
+	remove_planet_flag = len_species_mol
+	remove_planet_flag = len_species_plant
+	remove_planet_flag = len_species_hum
+}

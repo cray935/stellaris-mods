@@ -1,0 +1,79 @@
+
+namespace = len_mod_support
+
+######################## Enhanced Gene Modding ###################################
+
+# This currently has no puropse as Enhanced Gene Modding only takes care of owned pops
+#
+# Hook into Life Creator (Science Ship Events)
+#country_event = {
+#	id = len_mod_support.1
+#	hide_window = yes
+#	
+#	trigger = {
+#		has_country_flag = len_species_created
+#		is_ai = no
+#		NOT = { #Prevent multiple menus
+#			has_country_flag = genemod_menu_active
+#			has_country_flag = genemod_window_confirm
+#			has_country_edict = genemod_prevent_menu
+#		} 
+#	}
+#	
+#	immediate = {
+#		
+#		event_target:len_species = { save_event_target_as = genemod_species }
+#		event_target:len_species_planet = {
+#			random_pop = {
+#				limit = { is_exact_same_species = event_target:len_species }
+#				save_event_target_as = genemod_pop
+#			}
+#		}
+#		
+#		set_country_flag = genemod_menu_active
+#		country_event = { id = genemodenh.2 }
+#	}
+#}
+
+# Hook into Life Creator (Life Engineering Facility)
+country_event = { 
+	id = len_mod_support.2
+	hide_window = yes
+	
+	trigger = {
+		any_owned_planet = {
+			has_planet_flag = len_species_created
+		}
+		is_ai = no
+		NOT = { #Prevent multiple menus
+			has_country_flag = genemod_menu_active
+			has_country_flag = genemod_window_confirm
+			has_country_edict = genemod_prevent_menu
+		}
+	}
+	
+	immediate = {
+		
+		event_target:len_species = { save_event_target_as = genemod_species }
+		event_target:len_species_planet = {
+			random_pop = {
+				limit = { is_exact_same_species = event_target:len_species }
+				save_event_target_as = genemod_pop
+			}
+		}
+		
+		set_country_flag = genemod_menu_active
+		country_event = { id = genemodenh.2 }
+	}
+}
+
+# They the game that Life Engineering is installed
+event = {
+	id = len_mod_support.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = life_engineering_installed
+	}
+}

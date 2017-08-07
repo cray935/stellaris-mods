@@ -1,0 +1,52 @@
+
+namespace = len_edict_events
+
+# Prevent pop growth
+planet_event = {
+	id = len_edict_events.1
+	hide_window = yes
+	
+	trigger = {
+		has_edict = len_edict_prevent_growth
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = len_prevent_growth
+			days = -1
+		}
+	}
+}
+
+# Undo pop growth
+planet_event = {
+	id = len_edict_events.2
+	hide_window = yes
+	
+	trigger = {
+		has_edict = len_edict_undo_prevent_growth
+	}
+	
+	immediate = {
+		remove_modifier = len_prevent_growth
+	}
+}
+
+# Security event to prevent growing pops popping up
+planet_event = {
+	id = len_edict_events.3
+	hide_window = yes
+	
+	trigger = {
+		has_modifier = len_prevent_growth
+		has_growing_pop = yes
+	}
+	
+	immediate = {
+		every_tile = {
+			limit = { has_growing_pop = yes }
+			
+			kill_pop = yes
+		}
+	}
+}

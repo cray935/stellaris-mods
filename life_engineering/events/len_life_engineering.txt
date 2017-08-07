@@ -1,0 +1,326 @@
+ 
+namespace = len_life_engineering
+
+# Ship found suitable planet for engineering actions (HIDDEN)
+fleet_event = {
+	id = len_life_engineering.0
+	hide_window = yes
+	
+	trigger = {
+		is_ship_class = shipclass_science_ship
+		exists = OWNER
+		OWNER = { 
+			is_ai = no
+			has_technology = len_tech_life_engineering
+			NOT = { has_edict = len_edict_prevent_life_engineering_event }
+		}
+		exists = ORBIT
+		ORBIT = {
+			is_star = no
+			is_surveyed = { 
+				who = PREV.OWNER
+				status = yes
+			}
+			NOT = { has_planet_flag = len_engineering_in_process }
+			NOT = { is_planet_class = pc_habitat }
+			is_colonizable = yes
+			is_colony = no
+			is_terraforming = no
+			has_anomaly = no
+			count_pops = { count = 0 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		ORBIT = { save_event_target_as = current_planet }
+		fleet_event = { id = len_life_engineering.1 }
+	}
+}
+# Ship found suitable planet for engineering actions
+fleet_event = {
+	id = len_life_engineering.1
+	title = "len_life_engineering.1.name"
+	desc = "len_life_engineering.1.desc"
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_alien_nature
+	location = event_target:current_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "len_life_engineering.1.a"
+		
+		event_target:current_planet = {
+			enable_special_project = {
+				name = "len_project_life_engineering"
+				location = this
+				owner = root.owner
+			}
+			set_planet_flag = len_engineering_in_process
+		}
+	}
+	
+	option = {
+		name = "len_life_engineering.1.b"
+		
+		trigger = {
+			OWNER = {
+				has_technology = len_tech_society_engineering
+			}
+		}
+		
+		event_target:current_planet = {
+			enable_special_project = {
+				name = "len_project_society_engineering"
+				location = this
+				owner = root.owner
+			}
+			set_planet_flag = len_engineering_in_process
+		}
+	}
+	
+	option = {
+		name = "len_life_engineering.1.abort"
+	}
+}
+
+# Delegator events
+
+planet_event = {
+	id = len_life_engineering.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+		save_event_target_as = current_planet
+		
+		event_target:project_owner = {
+			
+			country_event = { id = len_life_creator.1 }
+			country_event = { id = len_life_engineering.10 days = 5 }
+		}
+	}
+}
+
+planet_event = {
+	id = len_life_engineering.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+		save_event_target_as = current_planet
+		
+		# Primitives are sentient and have traits
+		set_planet_flag = len_species_sentient
+		set_planet_flag = len_species_random_traits
+		
+		event_target:project_owner = {
+			
+			country_event = { id = len_life_creator.1 }
+			country_event = { id = len_life_engineering.100 days = 5 }
+		}
+	}
+}
+
+# The project was not completed, remove flag for later engineering
+planet_event = {
+	id = len_life_engineering.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_planet_flag = len_engineering_in_process
+	}
+}
+
+# Create pre-sentient species
+country_event = {
+	id = len_life_engineering.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:current_planet = {
+			
+			len_create_species = yes
+			
+			every_tile = {
+				limit = { has_blocker = yes }
+				remove_blocker = yes
+			}
+			
+			# create pops
+			while = {
+				limit = {
+					count_pops = {
+						limit = { 
+							has_pop_flag = fresh_engineered_pop
+						}
+						count < 3
+					}
+					free_pop_tiles > 0
+				}
+				best_tile_for_pop = {
+					create_pop = { species = last_created }
+					pop = { 
+						set_pop_flag = fresh_engineered_pop
+					}
+				}
+			}
+			
+			# remove engineering marker from pops
+			while = {
+				limit = {
+					count_pops = {
+						limit = { 
+							has_pop_flag = fresh_engineered_pop
+						}
+						count > 0
+					}
+				}
+				random_pop = {
+					limit = { has_pop_flag = fresh_engineered_pop }
+					remove_pop_flag = fresh_engineered_pop
+				}
+			}
+			
+			remove_planet_flag = len_engineering_in_process
+		}
+		
+		country_event = { id = len_life_engineering.11 }
+		country_event = { id = len_life_creator.101 }
+	}
+}
+
+# Pre-Sentient Notification
+country_event = {
+	id = len_life_engineering.11
+	title = "len_life_engineering.11.name"
+	desc = "len_life_engineering.11.desc"
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_alien_nature
+	location = event_target:len_species_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Create stone age species
+country_event = {
+	id = len_life_engineering.100
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:current_planet = {
+		
+			len_create_species = yes
+			
+			create_country = {
+				name = random
+				authority = random
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+				}
+				species = last_created
+				ethos = random
+				flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"turquoise"
+						"green"
+						"null"
+						"null"
+					}
+				}
+				type = primitive
+			}
+			last_created_country = {
+				set_graphical_culture = preindustrial_01
+				set_country_flag = stone_age 
+				set_primitive_age = stone_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+			}
+			every_tile = {
+				limit = { has_blocker = yes }
+				remove_blocker = yes
+			}
+			set_owner = last_created_country
+			set_capital = yes
+			create_colony = {
+				owner = last_created_country
+				species = last_created
+				ethos = owner
+			}
+			random_tile = {
+				limit = { has_building = building_colony_shelter }
+				remove_building = yes
+			}
+			while = {
+				count = 1
+				best_tile_for_pop = {
+					create_pop = {
+						species = last_created
+					}
+				}
+			}
+			create_army = {
+				name = "Primitive Army"
+				owner = last_created
+				species = last_created
+				type = "primitive_army"
+			}
+			last_created_country = {
+				establish_contact = { who = event_target:project_owner }
+				establish_communications = event_target:project_owner
+				save_event_target_as = primitive_civ
+			}
+			
+			remove_planet_flag = len_engineering_in_process
+		}
+		
+		country_event = { id = len_life_engineering.101 }
+		country_event = { id = len_life_creator.101 }
+	}
+}
+
+# Primitive Notification
+country_event = {
+	id = len_life_engineering.101
+	title = "len_life_engineering.101.name"
+	desc = "len_life_engineering.101.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = event_target:len_species_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}

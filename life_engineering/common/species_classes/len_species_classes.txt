@@ -1,0 +1,13 @@
+
+len_life_engineering_unit = {
+	playable = { has_global_flag = game_started }
+	randomized = no
+	robotic = yes
+	
+	portraits = {
+		"robot1"
+	}
+	
+	graphical_culture = ai_01
+	move_pop_sound_effect = "robot_pops_move"
+}

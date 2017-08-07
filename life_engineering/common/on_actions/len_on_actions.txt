@@ -1,0 +1,36 @@
+
+#A building construction has been completed.
+# This = Planet
+# From = Tile
+on_building_complete = {
+	events = {
+		
+	}
+}
+
+# A building construction has demolished.
+# This = Planet
+# From = Tile
+on_building_demolished = {
+	events = {
+		
+	}
+}
+
+# A building construction has been completed, which is an upgrade of previous building.
+# This = Planet
+# From = Tile
+on_building_upgraded = {
+	events = {
+		len_lef_project_events.1 # Create species
+		len_lef_project_events.5 # Create Titanic Life
+		len_lef_project_events.6 # Promethean Project
+		len_lef_project_events.8 # Primitives Project
+	}
+}
+
+on_game_start = {
+	events = {
+		len_mod_support.100
+	}
+}

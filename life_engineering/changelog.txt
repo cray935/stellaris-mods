@@ -1,0 +1,154 @@
+* Changelog 1.9.0
+- WIP: Society Engineering Project
+- TODO: Primitive hibernation event chain must be completed (localisation left)
+
+Changelog 1.8.5
+- fixed bug with event that pops up multiple times if player did not click ok option
+
+Changelog 1.8.4
+- global flag for checking that Life Engineering is installed
+- mod support for ethics and governments
+
+Changelog 1.8.3
+- removed tech restrictions for spiritualists and fanatic spiritualists
+
+Changelog 1.8.2
+- pseudo german locs added
+- version backwards to 1.6.2 (still compatible with 1.7.4)
+- tweaked mechanics so planet name will be randomized by primitive species class
+
+Changelog 1.8.1
+- mod support for Enhanced Gene modding (only Life Engineering Facility Projects)
+
+Changelog 1.8.0
+- added the Promethean Project
+- fixed an issue where titanic life project needed life seeds
+- upgraded for stellaris 1.7.*
+
+Changelog 1.7.3
+- cleanup behind the scenes (removing old, extending new)
+- it is now possible for modders to hook into many aspects of this mod without actually modifying this one
+- event cleanup, i recommend you to enable the auto pause for events!
+- stone age primitives now are 2 instead of 1 and are placed at best possible tiles
+- added edict to disable the science ship event (i noticed that some mods have anomalies that take more time than vanilla does and it can be annoying that every few years the event shows up, so you can disable it if you don't want to have it)
+
+Changelog 1.7.2
+- added  Create Titanic Life Project
+- fixed bug where life engineering event prompt could come without the technology
+
+Changelog 1.7.1
+- Life Engineering Project Startup event is now visible
+
+Changelog 1.7.0
+- complete rework of life engineering facility and life seeds
+	- life engineering facility allows the build of life seeds
+	- life seeds can grow to life trees (4 months, one per planet)
+	- life trees can grow to life hives (4 months, one per planet)
+	- life hives can be upgraded to hive reservoirs for research purposes only (society and engineering)
+	- if all seeds are grown hives the LE facility can be upgraded to create life
+	- the life event turns all hives to pops of the same new species, the life engineering facility will be removed
+		- each hive process takes about 2 months
+	- alternative to that is to harvest all hives for research (society and engineering), the life engineering facility will not be removed
+- removed building environment stabilizer
+- great improvements at the life creator code, can be used for mod addons!
+- LERC edicts removed
+- LERC won't come back, however it is still there for not destroying save games.
+- some code cleaning
+
+Changelog 1.6.1 (1.6.0 extensions)
+- code cleanup
+- new building Environment Stabilizer (prevents some random events from spawning)
+- added edict to prevent population growth on a planet
+- added events to the life seed buildings, makes them more alive in the game
+- removed Life Engineering Facility modifier from the game
+- fixed issue with blank human pre-sentient not being "blank"
+- new trait Engineered Scourge (be warned, it is cruel for your colony)
+
+Changelog 1.6.0
+- LE events remove tile blockers on planet now
+- LE facility can be build by players
+- new building Life Seed Facility (LE facility required)
+- Life Seed Research (WIP)
+- spiritualists restriction removed (community feedback)
+
+Changelog 1.5.3
+- added missing localisation strings
+
+Changelog 1.5.2
+- added edict to get rid of the Life Engineering Facility
+- spiritualists now are unable to research the techs
+- spiritualists now are unable to use life engineering
+
+Changelog 1.5.1
+- fixed an issue where robot hater could use LERC, but LERC is a robot
+
+Changelog 1.5.0
+- upgrade for 1.6.*
+- opinion modifiers removed
+- life engineering test site (special colony with special edicts)
+- engineered-only pre-sentients
+
+Changelog 1.4.4
+- added goto icon to the main events
+- increased timelimit for special projects
+
+Changelog 1.4.3
+- increased time to happen for the prompt event (~30 days) to reduce spamming
+- fixed the issue that the special project does not appear if ship is moving
+- put goto icon to the prompt event so you can see which planet it is
+
+Changelog 1.4.2
+- life creator uses the default species classes to have more diverse portraits
+- engineered trait is back on primitive and pre-sentient species
+- engineered trait costs now -3 which allows you use 3 points on uplifting and genetic mods
+
+Changelog 1.4.1
+- fixed an issue where the option for pre-sentient humanoid creation did not show up
+
+Changelog 1.4.0
+- added plants for pre-sentients
+- added humanoids for pre-sentients (not in random option)
+- added humanoids for primitives (not in random option)
+- players can now have multiple life engineering projects active at once
+
+Changelog 1.3.3
+- russian translation added
+
+Changelog 1.3.3
+- russian translation added
+
+Changelog 1.3.2
+- spelling issue fixed
+
+Changelog 1.3.1
+- fixed an issue where the observation mission started at 100%
+
+Changelog 1.3.0
+- added empire edict to enable life engineering instead of being active automatically
+- added new technology to be researched for new observation missions
+- added observation missions to advance a species to next age (stone age, bronze age, etc.)
+- disabled the engineered trait at created species as it has no effects at the moment
+
+Changelog 1.2.0
+- after completing the engineering event the player can now decide which kind of species should be created
+- reworked the events for clean coding
+- randomized species creation is still an option
+- plantoid DLC owners will be able to choose plant species class for primitive life creation
+
+Changelog 1.1.0
+- Planet's must not have anomalies now for the engineering prompt to show up.
+Now the mod should less spam people.
+
+
+Changelog 1.0.2
+- fixed a bug where it was possible to lock out the life engineering project
+
+Changelog 1.0.1
+- Opinion Modifiers for Life Engineering Project weren't applied to other known empires.
+This fix is save game compatible.
+
+Changelog 1.0.0
+- Technologies added to "learn" life engineering
+- Like & Dislike of other empires by doing life engineering
+- Life Englineering: Create Pre-Sentient Life
+- Society Engineering: Create Primitive Life

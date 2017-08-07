@@ -1,0 +1,11 @@
+
+# Prevents population growth
+len_prevent_growth = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
+	icon_frame = 3
+
+	pop_growth_speed = -10
+}
+
+len_scourge_fed = {
+}

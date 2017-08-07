@@ -1,0 +1,309 @@
+
+namespace = len_lef_project_events
+
+# Trigger Event (HIDDEN)
+planet_event = {
+	id = len_lef_project_events.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				has_building = len_building_lef_project_presentient
+				has_building = len_building_lef_project_sentient
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_building = len_building_lef_project_sentient }
+			set_planet_flag = len_species_sentient
+		}
+		set_planet_flag = len_lef_project_ready
+		planet_event = { id = len_life_creator.0 }
+	}
+}
+
+# Player chose species class, start the process
+planet_event = {
+	id = len_lef_project_events.2
+	title = "len_lef_project_events.2.name"
+	desc = "len_lef_project_events.2.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+	location = ROOT
+	
+	trigger = {
+		has_planet_flag = len_lef_project_ready
+		has_planet_flag = len_species_class_chosen
+	}
+	
+	option = {
+		name = OK
+	}
+	
+	immediate = {
+		remove_planet_flag = len_lef_project_ready
+		set_planet_flag = len_lef_project_in_process
+	}
+}
+
+# Hives processing
+planet_event = {
+	id = len_lef_project_events.3
+	hide_window = yes
+	
+	trigger = {
+		has_planet_flag = len_lef_project_in_process
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		change_variable = { 
+			which = "len_hives_processing" 
+			value = +1 
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = "len_hives_processing"
+					value = "len_hive_count"
+				}
+			}
+			remove_planet_flag = len_lef_project_in_process
+			planet_event = { id = len_lef_project_events.4 }
+		}
+	}
+}
+
+# Hives finished the process and are turning into species
+planet_event = {
+	id = len_lef_project_events.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		len_create_species = yes
+		every_tile = {
+			limit = { has_building = len_building_hive }
+			remove_building = yes
+			kill_pop = yes
+			create_pop = { species = event_target:len_species }
+		}
+		change_variable = {
+			which = "len_hive_count"
+			value = 0
+		}
+		random_tile = {
+			limit = { 
+				OR = {
+					has_building = len_building_lef_project_presentient
+					has_building = len_building_lef_project_sentient
+				}
+			}
+			remove_building = yes
+		}
+		planet_event = { id = len_life_creator.100 }
+	}
+}
+
+# Titanic Life Creation
+planet_event = {
+	id = len_lef_project_events.5
+	title = "len_lef_project_events.5.name"
+	desc = "len_lef_project_events.5.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_alien_nature
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = len_building_lef_project_titanic }
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_modifier = {
+			modifier = "titanic_life"
+			days = -1
+		}
+	}
+	
+	immediate = {
+		FROM = { remove_building = yes }
+	}
+}
+
+# Promethean Project
+planet_event = {
+	id = len_lef_project_events.6
+	title = "len_lef_project_events.6.name"
+	desc = "len_lef_project_events.6.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_building = len_building_lef_project_promethean }
+	}
+	
+	option = {
+		name = FASCINATING
+	}
+	
+	option = {
+		name = REMARKABLE
+	}
+	
+	option = {
+		name = UNFORTUNATE
+	}
+	
+	immediate = {
+		
+		FROM = { 
+			remove_building = yes
+			pop = {
+				pop_event = { id = len_lef_project_events.7 }
+			}
+		}
+	}
+}
+
+# Make the pop promethean and let everyone else die
+pop_event = {
+	id = len_lef_project_events.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		planet = {
+			create_species = {
+				is_mod = yes
+				name = this
+				plural = this
+				class = this
+				portrait = this
+				traits = {
+					trait = len_trait_promethean
+				}
+				homeworld = this
+			}
+		}
+		
+		change_species = last_created
+		set_pop_flag = len_promethean_pop
+	}
+	
+	after = {
+		planet = {
+			every_tile = {
+				limit = { 
+					pop = {
+						NOT = { has_pop_flag = len_promethean_pop }
+						is_robot_pop = no
+					}
+				}
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+# Primitives LEF built
+planet_event = {
+	id = len_lef_project_events.8
+	title = "len_lef_project_events.8.name"
+	desc = "len_lef_project_events.8.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			OR = {
+				has_building = len_building_lef_project_primitives_stone_age
+				has_building = len_building_lef_project_primitives_late_medieval_age
+				has_building = len_building_lef_project_primitives_industrial_age
+			}
+		}
+		has_owner = yes
+		NOT = { has_planet_flag = len_lef_project_primitives_in_process }
+	}
+	
+	option = {
+		name = EXCELLENT
+	}
+	
+	immediate = {
+		
+		set_planet_flag = len_lef_project_primitives_in_process
+		enable_special_project = {
+			name = "len_lef_project_create_society"
+			location = this
+			owner = root
+		}
+	}
+}
+
+# Primitives LEF project completed, will trigger awakening process
+planet_event = {
+	id = len_lef_project_events.9
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_planet_flag = len_lef_project_primitives_in_process
+	}
+	
+	immediate = {
+		remove_planet_flag = len_lef_project_primitives_in_process
+		owner = { save_event_target_as = project_owner }
+		every_tile = {
+			if = {
+				limit = {
+					has_building = "len_building_lef_project_primitives_stone_age"
+				}
+				PREV = { set_planet_flag = stone_age }
+			}
+			if = {
+				limit = {
+					has_building = "len_building_lef_project_primitives_late_medieval_age"
+				}
+				PREV = { set_planet_flag = late_medieval_age }
+			}
+			if = {
+				limit = {
+					has_building = "len_building_lef_project_primitives_industrial_age"
+				}
+				PREV = { set_planet_flag = industrial_age }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_building = "len_building_survivor_capsule"
+					}
+				}
+				remove_building = yes
+				kill_pop = yes
+			}
+		}
+		
+		planet_event = { id = len_primitive_survivors.10 }
+	}
+}

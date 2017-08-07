@@ -1,0 +1,60 @@
+
+# Develop pre-sentient life
+special_project = {
+	key = "len_project_life_engineering"
+	cost = 300
+	timelimit = 90
+	tech_department = society_technology
+	picture = GFX_evt_microscopic_life
+	
+	event_scope = planet_event
+	
+	on_success = {
+		FROMFROM = {
+			OWNER = { save_event_target_as = project_owner }
+		}
+		planet_event = { id = len_life_engineering.2 }
+	}
+	
+	on_fail = {
+		FROM = {
+			planet_event = { id = len_life_engineering.4 }
+		}
+	}
+}
+
+# Develop primitive life
+special_project = {
+	key = "len_project_society_engineering"
+	cost = 500
+	timelimit = 90
+	tech_department = society_technology
+	picture = GFX_evt_alien_cavemen
+	
+	event_scope = planet_event
+	
+	on_success = {
+		FROMFROM = {
+			OWNER = { save_event_target_as = project_owner }
+		}
+		planet_event = { id = len_life_engineering.3 }
+	}
+	
+	on_fail = {
+		FROM = {
+			planet_event = { id = len_life_engineering.4 }
+		}
+	}
+}
+
+# LEF Create Society of Survivors
+special_project = {
+	key = "len_lef_project_create_society"
+	days_to_research = 1800 # about 5 years
+	
+	event_scope = planet_event
+	
+	on_success = {
+		planet_event = { id = len_lef_project_events.9 }
+	}
+}

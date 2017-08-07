@@ -1,0 +1,275 @@
+##################################################################################
+######################## The Life Creator creates new species ####################
+##################################################################################
+#
+# Library events from Life Engineering Mod.
+# This library works by planet flags to be a modular library for creating species.
+#
+# Important planet flags
+#
+# len_species_* 
+#	Determines which species class should be used.
+#
+# len_species_sentient 
+#	Determines that the species should be sentient, otherwise it is pre-sentient.
+#
+# Important country flags
+#
+# len_species_created
+#	Short timed flag to hook into the process right after species creation.
+#   Only applied by event "len_life_creator.101".
+#
+# Usage:
+#
+# 1. Let the user choose a species by triggering the event "len_life_creator.0".
+#    That will mark the planet with a species class flag for later use.
+#    The "len_species_class_chosen" planet flag is also set by this event
+#    after the user has chosen the species class.
+#
+# 2. If you want to create a sentient species add the planet flag called
+#    "len_species_sentient" to the target planet. If the species should have
+#    random traits the planet must be flagged "len_species_random_traits"
+#
+# 3. Your life creation event can trigger by the 
+#    "len_species_class_chosen" planet flag.
+#    For mod compatibility it is adviced that you might use 
+#    an additional planet_flag for the event trigger.
+#
+# 4. Use the the effect "len_create_species" from len_scripted_effects file 
+#    to create the new species.
+#    You can access the created species by event_target:len_species
+#
+# 5. Place some pops by "create_pop = { species = event_target:len_species }"
+#    as you wish.
+#
+# 6. You can now inform the player by triggering the event "len_life_creator.100".
+#    This also removes the "len_species_class_chosen" planet flag.
+#
+# For an example usage see event file "len_lef_project_events".
+#
+# author: cray935
+##################################################################################
+
+namespace = len_life_creator
+
+######################## Choose Species Class ####################################
+
+planet_event = {
+	id = len_life_creator.0
+	title = "len_life_creator.0.name"
+	desc = "len_life_creator.0.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "RANDOM"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_random
+		}
+	}
+	
+	option = {
+		name = "MAM_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_mam
+		}
+	}
+	
+	option = {
+		name = "REP_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_rep
+		}
+	}
+	
+	option = {
+		name = "AVI_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_avi
+		}
+	}
+	
+	option = {
+		name = "ART_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_art
+		}
+	}
+	
+	option = {
+		name = "MOL_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_mol
+		}
+	}
+	
+	option = {
+		name = "FUN_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_fun
+		}
+	}
+	
+	option = {
+		name = "PLANT_plural"
+		
+		trigger = { local_has_dlc = "Plantoid" }
+		
+		hidden_effect = {
+			set_planet_flag = len_species_plant
+		}
+	}
+	
+	option = {
+		name = "HUM_plural"
+		
+		hidden_effect = {
+			set_planet_flag = len_species_hum
+		}
+	}
+	
+	after = {
+		set_planet_flag = len_species_class_chosen
+	}
+}
+
+# Must triggered on the target planet for the target country
+country_event = {
+	id = len_life_creator.1
+	title = "len_life_creator.0.name"
+	desc = "len_life_creator.0.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "RANDOM"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_random }
+		}
+	}
+	
+	option = {
+		name = "MAM_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_mam }
+		}
+	}
+	
+	option = {
+		name = "REP_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_rep }
+		}
+	}
+	
+	option = {
+		name = "AVI_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_avi }
+		}
+	}
+	
+	option = {
+		name = "ART_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_art }
+		}
+	}
+	
+	option = {
+		name = "MOL_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_mol }
+		}
+	}
+	
+	option = {
+		name = "FUN_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_fun }
+		}
+	}
+	
+	option = {
+		name = "PLANT_plural"
+		
+		trigger = { local_has_dlc = "Plantoid" }
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_plant }
+		}
+	}
+	
+	option = {
+		name = "HUM_plural"
+		
+		hidden_effect = {
+			FROM = { set_planet_flag = len_species_hum }
+		}
+	}
+	
+	after = {
+		FROM = { 
+			set_planet_flag = len_species_class_chosen
+		}
+		set_country_flag = len_species_class_chosen
+	}
+}
+
+######################## Completion Event ########################################
+
+planet_event = {
+	id = len_life_creator.100
+	title = "len_life_creator.100.name"
+	desc = "len_life_creator.100.desc"
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_alien_nature
+	location = event_target:len_species_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		
+		hidden_effect = {
+			event_target:len_species_planet = { 
+				remove_planet_flag = len_species_class_chosen
+				set_timed_planet_flag = { flag = len_species_created days = 2 }
+			}
+		}
+	}
+}
+
+# Hidden completion event if you want to show an own notification. Notice that this is a country event!
+country_event = {
+	id = len_life_creator.101
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:len_species_planet = { remove_planet_flag = len_species_class_chosen }
+		remove_country_flag = len_species_class_chosen
+		set_timed_country_flag = { flag = len_species_created days = 2 }
+	}
+}

@@ -1,0 +1,269 @@
+
+namespace = len_primitive_survivors
+
+# Hibernating Primitives created
+planet_event = {
+	id = len_primitive_survivors.10
+	title = "len_primitive_survivors.10.name"
+	desc = "len_primitive_survivors.10.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_primitive_civilization
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+	
+	immediate = {
+		
+		random_tile = {
+			limit = { has_pop = yes }
+			save_event_target_as = primitive_species # yepp, if you want a specific species, just save pops of that species in the capsules ;) :p
+		}
+		
+		save_event_target_as = primitive_planet
+		
+		create_country = {
+			name = random
+			authority = event_target:project_owner
+			species = event_target:primitive_species
+			ethos = event_target:project_owner
+			flag = {
+				icon = {
+					category = "special"
+					file = "primitive.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors={
+					"turquoise"
+					"green"
+					"null"
+					"null"
+				}
+			}
+			type = primitive
+		}
+		
+		last_created_country = {
+			set_graphical_culture = preindustrial_01 # TODO: that should be something else..
+			set_country_flag = len_hibernation_age
+			set_primitive_age = len_hibernation_age
+		}
+		
+		set_owner = last_created_country
+		set_capital = yes
+		
+		last_created_country = {
+			establish_contact = { who = event_target:project_owner }
+			establish_communications = event_target:project_owner
+			save_event_target_as = primitive_civ
+		}
+		
+		event_target:project_owner = {
+			country_event = { id = len_primitive_survivors.100 days = 1800 random = 20 }
+			# TODO: rare malfunctioning event & other results
+		}
+	}
+}
+
+# Hibernating Primitives awakening (Delegator Event)
+country_event = {
+	id = len_primitive_survivors.100
+	hide_window = yes
+	
+	is_triggered_only = yes
+		
+	immediate = {
+		if = {
+			limit = {
+				event_target:primitive_planet = { has_planet_flag = stone_age }
+			}
+			event_target:primitive_planet = { remove_planet_flag = stone_age }
+			country_event = { id = len_primitive_survivors.110 }
+		}
+		if = {
+			limit = {
+				event_target:primitive_planet = { has_planet_flag = late_medieval_age }
+			}
+			event_target:primitive_planet = { remove_planet_flag = late_medieval_age }
+			country_event = { id = len_primitive_survivors.120 }
+		}
+		if = {
+			limit = {
+				event_target:primitive_planet = { has_planet_flag = industrial_age }
+			}
+			event_target:primitive_planet = { remove_planet_flag = industrial_age }
+			country_event = { id = len_primitive_survivors.130 }
+		}
+	}
+}
+
+# Hibernating Primitives awakening (Stone Age)
+country_event = {
+	id = len_primitive_survivors.110
+	title = "len_primitive_survivors.110.name"
+	desc = "len_primitive_survivors.110.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_primitive_civilization
+	location = event_target:primitive_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+	
+	immediate = {
+		event_target:primitive_civ = {
+			set_timed_country_flag = {
+				flag = recently_advanced
+				days = 2160 #60yrs
+			}
+			remove_country_flag = len_hibernation_age
+			change_government = {
+				civics = {
+					civic = civic_secret_of_fire
+					civic = civic_the_wheel
+				}
+			}
+			set_country_flag = stone_age
+			set_primitive_age = stone_age
+			set_graphical_culture = preindustrial_01
+		}
+		event_target:primitive_planet = {
+			create_army = {
+				name = "NAME_Primitive_Army"
+				owner = event_target:primitive_civ
+				species = event_target:primitive_species
+				type = "primitive_army"
+			}
+			every_tile = {
+				limit = { has_building = "len_building_survivor_capsule" }
+				remove_building = yes
+			}
+		}
+	}
+}
+
+# Hibernating Primitives awakening (Late Medieval Age)
+country_event = {
+	id = len_primitive_survivors.120
+	title = "len_primitive_survivors.120.name"
+	desc = "len_primitive_survivors.120.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = event_target:primitive_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+	
+	immediate = {
+		event_target:primitive_civ = {
+			set_timed_country_flag = {
+				flag = recently_advanced
+				days = 2160 #60yrs
+			}
+			remove_country_flag = len_hibernation_age
+			change_government = {
+				civics = {
+					civic = civic_secret_of_fire
+					civic = civic_the_wheel
+				}
+			}
+			set_country_flag = late_medieval_age
+			set_primitive_age = late_medieval_age
+			set_graphical_culture = preindustrial_01
+		}
+		event_target:primitive_planet = {
+			while = {
+				count = 3
+				create_army = {
+					name = "NAME_Primitive_Army"
+					owner = event_target:primitive_civ
+					species = event_target:primitive_species
+					type = "primitive_army"
+				}
+			}
+			while = {
+				count = 2
+				random_tile = {
+					limit = { has_building = "len_building_survivor_capsule" }
+					set_building = "building_primitive_farm"
+				}
+			}
+			every_tile = {
+				limit = { has_building = "len_building_survivor_capsule" }
+				remove_building = yes
+			}
+		}
+	}
+}
+
+# Hibernating Primitives awakening (Industrial Age)
+country_event = {
+	id = len_primitive_survivors.130
+	title = "len_primitive_survivors.130.name"
+	desc = "len_primitive_survivors.130.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = event_target:primitive_planet
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+	
+	immediate = {
+		event_target:primitive_civ = {
+			set_timed_country_flag = {
+				flag = recently_advanced
+				days = 2160 #60yrs
+			}
+			remove_country_flag = len_hibernation_age
+			change_government = {
+				civics = {
+					civic = civic_secret_of_fire
+					civic = civic_the_wheel
+				}
+			}
+			set_country_flag = late_medieval_age
+			set_primitive_age = late_medieval_age
+			set_graphical_culture = industrial_01
+		}
+		event_target:primitive_planet = {
+			while = {
+				count = 3
+				create_army = {
+					name = "NAME_Industrial_Army"
+					owner = event_target:primitive_civ
+					species = event_target:primitive_species
+					type = "industrial_army"
+				}
+			}
+			while = {
+				count = 2
+				random_tile = {
+					limit = { has_building = "len_building_survivor_capsule" }
+					set_building = "building_primitive_farm"
+				}
+			}
+			random_tile = {
+				limit = { has_building = "len_building_survivor_capsule" }
+				set_building = "building_primitive_factory"
+			}
+			every_tile = {
+				limit = { has_building = "len_building_survivor_capsule" }
+				remove_building = yes
+			}
+		}
+	}
+}

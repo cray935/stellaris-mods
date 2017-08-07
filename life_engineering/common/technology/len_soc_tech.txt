@@ -1,0 +1,206 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+# ##################
+# Create Life
+# ##################
+
+len_tech_life_engineering = {
+	icon = "tech_gene_tailoring"
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { biology }	
+	prerequisites = { "tech_epigenetic_triggers" }
+	weight = @tier3weight1
+	
+	feature_flags = {
+		len_create_pre_sentient
+	}
+	
+	modifier = {
+		trait_points = 1
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			host_has_dlc = "Utopia"
+			has_global_flag = ethic_rebuild_installed
+			NOT = { has_ascension_perk = ap_life_creators }
+		}
+	}
+	
+	ai_weight = {
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+len_tech_society_engineering = {
+	icon = "tech_gene_tailoring"
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { statecraft }	
+	prerequisites = { "len_tech_life_engineering" }
+	weight = @tier3weight2
+	
+	feature_flags = {
+		len_create_pre_ftl
+	}
+	
+	modifier = {
+		 tile_resource_society_research_mult = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+len_tech_society_uplift = {
+	icon = "tech_adaptive_bureaucracy"
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { statecraft }	
+	prerequisites = { "len_tech_life_engineering" }
+	weight = @tier3weight2
+	
+	feature_flags = {
+		len_society_uplift
+	}
+	
+	modifier = {
+		 tile_resource_society_research_mult = 0.10
+	}
+	
+	weight_modifier = {
+		factor = 1.5
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+len_tech_promethean_project = {
+	icon = "tech_gene_expressions"
+	cost = @tier3cost2
+	area = society
+	category = { biology }
+	tier = 3
+	is_rare = yes
+	prerequisites = { "len_tech_life_engineering" "tech_gene_expressions" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_biology"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.50
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_spark_of_genius"
+			}
+		}
+	}
+}

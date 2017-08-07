@@ -1,0 +1,449 @@
+
+# Life Engineering Facility
+len_building_life_engineering_facility = {
+	
+	base_buildtime = 360
+	planet_unique = yes
+	icon = "building_clone_vats"
+	
+	cost = {
+		minerals = 200
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "len_building_life_engineering_in_progress"
+			planet = { NOT = { has_planet_flag = len_lef_project_in_process } }
+		}
+	}
+	
+	prerequisites = {
+		"len_tech_life_engineering"
+	}
+
+	upgrades = {
+		len_building_lef_project_presentient
+		len_building_lef_project_sentient
+		len_building_lef_project_titanic
+		len_building_lef_project_promethean
+		len_building_lef_project_primitives_stone_age
+		len_building_lef_project_primitives_late_medieval_age
+		len_building_lef_project_primitives_industrial_age
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Life Engineering Project (Pre-Sentient)
+len_building_lef_project_presentient = {
+	
+	base_buildtime = 360
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 350
+		energy = 150
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "len_building_lef_project_requirement"
+			planet = {
+				NOT = { any_tile = { has_building = len_building_life_seed } }
+				any_tile = { has_building = len_building_hive }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"len_tech_life_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Life Engineering Project (Sentient)
+len_building_lef_project_sentient = {
+	
+	base_buildtime = 360
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 350
+		energy = 150
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "len_building_lef_project_requirement"
+			planet = {
+				NOT = { any_tile = { has_building = len_building_life_seed } }
+				any_tile = { has_building = len_building_hive }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"len_tech_life_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Life Engineering Project (Titanic Life)
+len_building_lef_project_titanic = {
+	
+	base_buildtime = 500
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 750
+		energy = 350
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		planet = {
+			NOT = { has_modifier = titanic_life }
+		}
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	prerequisites = {
+		"len_tech_life_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Promethean Project
+len_building_lef_project_promethean = {
+	
+	icon = "building_clone_vats"
+	base_buildtime = 500
+	planet_unique = yes
+	is_listed = no
+	
+	cost = {
+		minerals = 1000
+		energy = 550
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "len_promethian_project_requirement_planet"
+			planet = {
+				count_pops = {
+					count > 9
+					limit = {
+						is_colony_pop = yes
+						is_robot_pop = no
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = {
+			text = "len_promethian_project_requirement_tile"
+			tile = {
+				has_grown_pop = yes
+				pop = { is_robot_pop = no }
+			}
+		}
+	}
+	
+	prerequisites = {
+		"len_tech_promethean_project"
+	}
+	
+	ai_replace = no
+}
+
+# Primitives-Projects
+
+len_building_lef_project_primitives_stone_age = {
+	base_buildtime = 500
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 450
+		energy = 250
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	prerequisites = {
+		"len_tech_society_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+len_building_lef_project_primitives_late_medieval_age = {
+	base_buildtime = 500
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 600
+		energy = 400
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	prerequisites = {
+		"len_tech_society_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+len_building_lef_project_primitives_industrial_age = {
+	base_buildtime = 500
+	planet_unique = yes
+	icon = "building_clone_vats"
+	is_listed = no
+	
+	cost = {
+		minerals = 750
+		energy = 550
+	}
+	
+	produced_resources = {
+		society_research = 4
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	prerequisites = {
+		"len_tech_society_engineering"
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Life Seed
+len_building_life_seed = {
+	
+	base_buildtime = 120
+	requires_pop = no
+	
+	cost = {
+		minerals = 50
+		energy = 25
+	}
+	
+	potential = {
+		planet = { has_building = len_building_life_engineering_facility }
+	}
+	
+	prerequisites = {
+		"len_tech_life_engineering"
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = "len_building_life_engineering_in_progress"
+			planet = { NOT = { has_planet_flag = len_lef_project_in_process } }
+		}
+	}
+	
+	ai_replace = no
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# Life Engineering Hive
+len_building_hive = {
+	
+	icon = "building_hive_ruins"
+	is_listed = no
+	requires_pop = no
+	
+	ai_replace = no
+	
+	upgrades = {
+		len_building_hive_reservoir
+	}
+}
+
+# Life Engineering Hive Reservoir
+len_building_hive_reservoir = {
+	
+	icon = "building_hive_ruins"
+	base_buildtime = 360
+	is_listed = no
+	requires_pop = no
+	
+	cost = {
+		minerals = 350
+		energy = 150
+	}
+	
+	produced_resources = {
+		society_research = 4
+		engineering_research = 3
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_society_research_add = 1
+		tile_building_resource_engineering_research_add = 1
+	}
+	
+	required_resources = {
+		energy = 8
+	}
+	
+	ai_replace = no
+	
+	allow = {
+		custom_tooltip = {
+			text = "len_building_life_engineering_in_progress"
+			planet = { NOT = { has_planet_flag = len_lef_project_in_process } }
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# Survivor Capsule to save pops for primitive awakening
+len_building_survivor_capsule = {
+
+	icon = "building_psi_corps"
+	base_buildtime = 120
+	
+	ai_replace = no
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = len_building_lef_project_primitives_stone_age
+				has_building = len_building_lef_project_primitives_late_medieval_age
+				has_building = len_building_lef_project_primitives_industrial_age
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}

@@ -1,0 +1,52 @@
+
+namespace = len_life_seed_events
+
+# Life Seed grows up (HIDDEN)
+planet_event = {
+	id = len_life_seed_events.1
+	hide_window = yes
+	
+	trigger = {
+		any_tile = { has_building = len_building_life_seed }
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		random_tile = {
+			limit = { has_building = len_building_life_seed }
+			remove_building = yes
+			set_building = len_building_hive
+		}
+		change_variable = {
+			which = "len_hive_count"
+			value = +1
+		}
+		planet_event = { id = len_life_seed_events.2 }
+	}
+}
+
+# All Life Seeds grown up
+planet_event = {
+	id = len_life_seed_events.2
+	title = "len_life_seed_events.2.name"
+	desc = "len_life_seed_events.2.desc"
+	# Don't know why but it does not work.. ???
+	#picture = GFX_evt_mature_life_seeds
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { any_tile = { has_building = len_building_life_seed } }
+		any_tile = { has_building = len_building_hive }
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}

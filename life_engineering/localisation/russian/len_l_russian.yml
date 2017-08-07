@@ -1,0 +1,123 @@
+﻿l_russian:
+
+ # ##################################
+ # Technologies
+ # ##################################
+ 
+ len_tech_life_engineering:0 "Инженерия жизни"
+ len_tech_life_engineering_desc:0 "С помощью этого метода мы можем спроектировать предразумных живых существ. Теперь можно отправить наших ученых для заполнения не колонизированных миров предразумными видами."
+ len_tech_society_engineering:0 "Общественная инженерия"
+ len_tech_society_engineering_desc:0 "Мы научились создавать жизнь. Теперь появилась возможность улучшить  процедуру создания примитивных, но разумных существ."
+ len_tech_society_uplift:0 "Возвышение общества"
+ len_tech_society_uplift_desc:0 "Развитые стратегии обучения и непрерывное совершенствование ведут к развитию общества."
+ 
+ # ##################################
+ # Feature Flags
+ # ##################################
+ 
+ len_create_pre_sentient:0 "Создать предразумных"
+ len_create_pre_sentient_desc:0 "Позволяет нашим ученым подготовить живые виды на не колонизированных планетах."
+ len_create_pre_ftl:0 "Создать примитивный вид"
+ len_create_pre_ftl_desc:0 "Позволяет нашим ученым создать примитивные виды на не колонизированных планетах."
+ len_society_uplift:0 "Продвинутое примитивное общество"
+ len_society_uplift_desc:0 "Позволяет наблюдателям миссий продвигать примитивные виды к следующему этапу развития."
+ 
+ # ##################################
+ # Traits
+ # ##################################
+ 
+ len_trait_engineered:0 "Искусственно созданные"
+ len_trait_engineered_desc:0 "§LЭта раса была разработана и создана развитой цивилизацией.§!\n"
+ len_trait_life_engineering_unit:0 "Life Engineering Monitor"
+ len_trait_life_engineering_unit_desc:0 "§LThis unit is equipped with high tech devices to research genetics faster than most machines can.§!\n"
+ 
+ # ##################################
+ # Opinions
+ # ##################################
+ 
+ opinion_life_engineer:0 "Инженерия жизни"
+ 
+ # ##################################
+ # Special Projects
+ # ##################################
+ 
+ len_project_life_engineering:0 "Подготовить предразумную жизнь"
+ len_project_life_engineering_DESC:0 "Наши ученые разработают простой вид. Он будет идеально вписываться в окружающую среду."
+ len_project_society_engineering:0 "Создать примивную жизнь"
+ len_project_society_engineering_DESC:0 "Наши ученые разработают вид разумных существ, которые прекрасно впишутся в окружающую среду."
+ len_project_build_facility:0 "Life Engineering Test Site Construction"
+ len_project_build_facility_DESC:0 "Our workers are constructing a facility on §Y[THIS.GetName]§! for advanced life engineering tasks. This will allow us to tinker the product much more to our affords."
+ 
+ # ##################################
+ # Events
+ # ##################################
+ 
+ len_life_engineering.1.name:0 "Возможности инженерии жизни"
+ len_life_engineering.1.desc:0 "Наши ученые думают, что смогут создать здесь новую жизнь. Подготовить проект?"
+ len_life_engineering.1.a:0 "Да, подготовить планету для создания §Yпредразумной§! жизни."
+ len_life_engineering.1.b:0 "Да, подготовить планету для создания §Yпримитивной§! жизни."
+ len_life_engineering.1.c:0 "Construct a §YLife Engineering Facility§! on the planet."
+ len_life_engineering.1.abort:0 "Нет, не создавать проект."
+ len_life_engineering.10.name:0 "Проект инженерии жизни"
+ len_life_engineering.10.desc:0 "Наши ученые уже близки к завершению проекта по созданию жизни. Есть только один вопрос - какого она будет вида?"
+ len_life_engineering.11.name:0 "Создание жизни завершено"
+ len_life_engineering.11.desc:0 "Наши учёные завершили проект по созданию жизни. В этом мире теперь есть новая раса."
+ len_life_engineering.100.name:0 "Проект общественной инженерии завершен"
+ len_life_engineering.100.desc:0 "Наши ученые близки к завершению проекта по созданию жизни. Есть только один вопрос - какого они будут вида?"
+ 
+ # ##################################
+ # Edicts
+ # ##################################
+ 
+ edict_len_enable_engineering:0 "Инженерия жизни"
+ edict_len_enable_engineering_desc:1 "Создает событие по созданию жизни"
+ edict_len_edict_presentient_engineering:0 "Create pre-sentients"
+ edict_len_edict_presentient_engineering_desc:1 "Our scientists prepare a project to engineer a new species on this planet."
+ edict_len_edict_presentient_engineering_blank:0 "Create advanced pre-sentients"
+ edict_len_edict_presentient_engineering_blank_desc:1 "Our scientists prepare a project for a more flexible form of pre-sentient species."
+ edict_len_edict_destroy_engineering_facility:0 "Destroy Facility"
+ edict_len_edict_destroy_engineering_facility_desc:1 "Removes LERC and the Life Engineering Facility on this planet."
+ 
+ # ##################################
+ # Observation Missions
+ # ##################################
+ 
+ mission_len_society_advance_1:0 "Развитие общества"
+ mission_len_society_advance_1_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_2:0 "Развитие общества"
+ mission_len_society_advance_2_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_3:0 "Развитие общества"
+ mission_len_society_advance_3_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_4:0 "Развитие общества"
+ mission_len_society_advance_4_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_5:0 "Развитие общества"
+ mission_len_society_advance_5_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_6:0 "Развитие общества"
+ mission_len_society_advance_6_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_7:0 "Развитие общества"
+ mission_len_society_advance_7_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_8:0 "Развитие общества"
+ mission_len_society_advance_8_desc:0 "Перевести расу в следующий этап развития."
+ mission_len_society_advance_9:0 "Развитие общества"
+ mission_len_society_advance_9_desc:0 "Перевести расу в следующий этап развития."
+ 
+ # ##################################
+ # Buildings
+ # ##################################
+ 
+ len_building_life_engineering_facility:0 "Life Engineering Facility"
+ len_building_life_engineering_facility_desc:0 "A laboratory to engineer new species with new experimental technologies."
+ 
+ # ##################################
+ # Static Modifiers
+ # ##################################
+ 
+ len_life_engineering_facility:0 "Life Engineering Test Site"
+ len_life_engineering_facility_desc:0 "This planet is a test site for genetic experiments answering the questions of life."
+ 
+ # ##################################
+ # Species Classes
+ # ##################################
+ 
+ len_life_engineering_unit:0 "Life Engineering Remote Control"
+ 

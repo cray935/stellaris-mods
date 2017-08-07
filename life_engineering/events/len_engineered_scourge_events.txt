@@ -1,0 +1,78 @@
+
+namespace = len_engineered_scourge_events
+
+# The scourge eats another pop
+planet_event = {
+	id = len_engineered_scourge_events.1
+	hide_window = yes
+	
+	trigger = {
+		any_pop = {
+			has_trait = len_trait_engineered_scourge
+			NOT = { has_modifier = len_scourge_fed }
+		}
+		any_pop = {
+			NOT = { has_trait = len_trait_engineered_scourge }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		random_pop = {
+			limit = {
+				has_trait = len_trait_engineered_scourge
+				NOT = { has_modifier = len_scourge_fed }
+			}
+		
+			add_modifier = {
+				modifier = len_scourge_fed
+				days = 240
+			}
+		}
+		
+		random_pop = {
+			limit = {
+				NOT = { has_trait = len_trait_engineered_scourge }
+			}
+		
+			kill_pop = yes
+		}
+	}
+}
+
+# The scourge reproduces itself
+planet_event = {
+	id = len_engineered_scourge_events.2
+	hide_window = yes
+	
+	trigger = {
+		any_pop = {
+			has_trait = len_trait_engineered_scourge
+			has_modifier = len_scourge_fed
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		random_pop = {
+			limit = {
+				has_trait = len_trait_engineered_scourge
+				has_modifier = len_scourge_fed
+			}
+			save_event_target_as = scourge_pop
+			remove_modifier = len_scourge_fed
+		}
+		random_tile = {
+			limit = {
+				has_pop = no
+			}
+			create_pop = { species = event_target:scourge_pop }
+		}
+	}
+}
