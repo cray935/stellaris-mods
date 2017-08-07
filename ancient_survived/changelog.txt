@@ -1,3 +1,6 @@
+changelog 1.0.1
+- added support for utopia ethics & civics 
+
 changelog 1.0.0
 - init at stellaris version 1.6.2
 - custom starting system
