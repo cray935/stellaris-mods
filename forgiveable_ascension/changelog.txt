@@ -1,6 +1,0 @@
-changelog 1.0.0
-- allows psionic/biological ascension
-- allows synthetic/biological ascension
-- allows psionic ascension for hive minds
-- allows synthetic ascension for hive minds
-- allows robotics & psionic techs for hive minds
