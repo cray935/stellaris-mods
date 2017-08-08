@@ -11,7 +11,3 @@ Planetary Extermination | 1.2.6 | 1.6.2
 Life Engineering | 1.8.5 | 1.6.2
 Forgiveable Ascension | 1.0.0 | 1.6.2
 Survived through Ages | 1.0.1 | 1.6.2
-## Unreleased mods
-Mod-Name | Mod-Version | Game-Version
---- | :---: | :---:
-Nothing in the process | - | -
