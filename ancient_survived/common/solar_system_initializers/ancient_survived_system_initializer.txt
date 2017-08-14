@@ -1,3 +1,4 @@
+@base_moon_distance = 5
 
 ancient_survived_system_initializer = {
 	
@@ -27,10 +28,10 @@ ancient_survived_system_initializer = {
 	
 	planet = {
 		count = { min = 0 max = 2 }
-		orbit_distance = 20
+		orbit_distance = 30
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
-		
+
 		change_orbit = @base_moon_distance
 
 		moon = {
@@ -43,7 +44,7 @@ ancient_survived_system_initializer = {
 	
 	planet = {
 		count = 1
-		orbit_distance = 20
+		orbit_distance = 30
 		home_planet = yes
 		class = ideal_planet_class
 		orbit_angle = { min = 90 max = 270 }
@@ -191,7 +192,7 @@ ancient_survived_system_initializer = {
 				}				
 			}			
 		}
-		
+
 		change_orbit = @base_moon_distance
 
 		moon = {
