@@ -135,14 +135,11 @@
  len_building_lef_project_promethean:0 "The Promethean Project"
  len_building_lef_project_promethean_desc:0 "Starts a Life Engineering Project to modify a species with experimental genes. The modification will be applied to the pop operating the facility."
  len_building_lef_project_primitives_stone_age:0 "Primitive Society (Stone Age)"
- len_building_lef_project_primitives_stone_age_desc:0 "Starts a Society Engineering Project to let the community on this planet regress to a primitive age. Our team will erase every signs of progress and then releases a virus to make a clean cut. Every pops outside a §Y$len_building_survivor_capsule$§! will die. All pops inside will indoctrinated through virtual reality to regress to the desired phase of evolution."
+ len_building_lef_project_primitives_stone_age_desc:0 "Starts a Society Engineering Project to let the community on this planet regress to a primitive age. Our team will erase every signs of progress."
  len_building_lef_project_primitives_late_medieval_age:0 "Primitive Society (Medieval)"
  len_building_lef_project_primitives_late_medieval_age_desc:0 "$len_building_lef_project_primitives_stone_age_desc$"
  len_building_lef_project_primitives_industrial_age:0 "Primitive Society (Industrial)"
  len_building_lef_project_primitives_industrial_age_desc:0 "$len_building_lef_project_primitives_stone_age_desc$"
- 
- len_building_survivor_capsule:0 "Survivors Chamber"
- len_building_survivor_capsule_desc:0 "Because of a viral outbreak pops need shelter to survive. This facility holds multiple pods to physically leave the body in stasis while the brain is indoctrinated to a false reality. After much time the scientists will drop the bodies outside and activate self-destruction while fleeing from the planet. All survivors will be part of a primitive society."
  
  # ##################################
  # Static Modifiers

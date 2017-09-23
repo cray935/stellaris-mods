@@ -412,26 +412,3 @@ len_building_hive_reservoir = {
 		factor = 1
 	}
 }
-
-# Survivor Capsule to save pops for primitive awakening
-len_building_survivor_capsule = {
-
-	icon = "building_psi_corps"
-	base_buildtime = 120
-	
-	ai_replace = no
-	
-	potential = {
-		planet = {
-			OR = {
-				has_building = len_building_lef_project_primitives_stone_age
-				has_building = len_building_lef_project_primitives_late_medieval_age
-				has_building = len_building_lef_project_primitives_industrial_age
-			}
-		}
-	}
-	
-	ai_weight = {
-		factor = 0
-	}
-}

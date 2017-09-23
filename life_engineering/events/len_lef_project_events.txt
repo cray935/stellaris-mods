@@ -293,15 +293,7 @@ planet_event = {
 				}
 				PREV = { set_planet_flag = industrial_age }
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_building = "len_building_survivor_capsule"
-					}
-				}
-				remove_building = yes
-				kill_pop = yes
-			}
+			remove_building = yes
 		}
 		
 		planet_event = { id = len_primitive_survivors.10 }
