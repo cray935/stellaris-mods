@@ -48,7 +48,7 @@
  len_project_society_engineering_DESC:0 "Our scientists will develop a kind of intelligent species which fill fit into the environment perfectly."
  
  len_lef_project_create_society:0 "Create primitive society on [ROOT.GetName]"
- len_lef_project_create_society_DESC:0 "Our scientists prepared a project to build a primitive society on this planet. They will simulate a plaque on the planet and the population is forced to enter some shelter. In these special bunkers the pops will be get into stasis and be indoctrinated. They essentially live in a virtual reality until they think this is the reality. They will then be released to the world and form a primitive civilization.\n\n§RWe should build some $len_building_survivor_capsule$ before starting this project.§!"
+ len_lef_project_create_society_DESC:0 "Our scientists prepared a project to build a primitive society on this planet. After the process the population will not remember most advanced parts of life."
  
  # ##################################
  # Events
@@ -79,7 +79,7 @@
  len_lef_project_events.6.name:0 "The Promethean Project"
  len_lef_project_events.6.desc:0 "We finally found a match for the promethean strain under our test subjects. Its body accepted the modification and is now evolving to a new kind of living. However all other subjects are dying because of extreme mutations. That seems to be a result of rejecting the promethean gene strain."
  len_lef_project_events.8.name:0 "Primitives Project starting"
- len_lef_project_events.8.desc:0 "The science center on [ROOT.GetName] initiated a project to form a primitive society on this planet. We will release a biological plaque on the planet and advice pops to gain shelter in special chambers. Our pops need to enter stasis chambers which indoctrinate them to forget their memories of former life. It will take some years but they will become primitives in the process. We should build some $len_building_survivor_capsule$ for this project.\n\n§RAll pops outside these buildings will die.§!"
+ len_lef_project_events.8.desc:0 "The science center on [ROOT.GetName] initiated a project to form a primitive society on this planet. Our experts indoctrinate the population to forget their memories of former life. It will take some time but they will become primitives in the process."
  
  len_primitive_survivors.10.name:0 "Hibernating population"
  len_primitive_survivors.10.desc:0 "The primitives project does well on [ROOT.GetName]. The plaque destroyed"

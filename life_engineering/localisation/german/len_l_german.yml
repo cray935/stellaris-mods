@@ -1,4 +1,4 @@
-﻿l_german:
+﻿l_english:
 
  # ##################################
  # Technologies
@@ -43,8 +43,12 @@
  
  len_project_life_engineering:0 "Engineer pre-sentient life"
  len_project_life_engineering_DESC:0 "Our scientists will develop a simple species. The species will fit into the environment perfectly."
+ 
  len_project_society_engineering:0 "Engineer primitive life"
  len_project_society_engineering_DESC:0 "Our scientists will develop a kind of intelligent species which fill fit into the environment perfectly."
+ 
+ len_lef_project_create_society:0 "Create primitive society on [ROOT.GetName]"
+ len_lef_project_create_society_DESC:0 "Our scientists prepared a project to build a primitive society on this planet. After the process the population will not remember most advanced parts of life."
  
  # ##################################
  # Events
@@ -74,6 +78,13 @@
  len_lef_project_events.5.desc:0 "Our scientists finished the titanic life form. These creatures are of enormous size so we just created a few. After releasing them into the wilderness they are on their own."
  len_lef_project_events.6.name:0 "The Promethean Project"
  len_lef_project_events.6.desc:0 "We finally found a match for the promethean strain under our test subjects. Its body accepted the modification and is now evolving to a new kind of living. However all other subjects are dying because of extreme mutations. That seems to be a result of rejecting the promethean gene strain."
+ len_lef_project_events.8.name:0 "Primitives Project starting"
+ len_lef_project_events.8.desc:0 "The science center on [ROOT.GetName] initiated a project to form a primitive society on this planet. Our experts indoctrinate the population to forget their memories of former life. It will take some time but they will become primitives in the process."
+ 
+ len_primitive_survivors.10.name:0 "Hibernating population"
+ len_primitive_survivors.10.desc:0 "The primitives project does well on [ROOT.GetName]. The plaque destroyed"
+ len_primitive_survivors.110.name:0 ""
+ len_primitive_survivors.110.desc:0 ""
  
  # ##################################
  # Edicts
@@ -120,12 +131,15 @@
  
  len_building_life_engineering_facility:0 "Life Engineering Facility"
  len_building_life_engineering_facility_desc:0 "A laboratory to engineer new species with new experimental technologies."
+ 
  len_building_life_seed:0 "Life Seed"
  len_building_life_seed_desc:0 "A facility with some life pods and a life seed device. A cluster of nano machines maintaines the life seed and help it growing. The seed will eventually grow until it becomes a mature environment to create life."
+ 
  len_building_hive:0 "Life Engineering Hive"
  len_building_hive_desc:0 "A mature environment of a $len_building_life_seed$. In the hive live several biological mirco organisms who represent early life forms and the beginning of evolution. The whole environment is maintained by nano machines. Our scientists can use this hive to create life or harvest it for more research."
  len_building_hive_reservoir:0 "Life Engineering Hive Reservoir"
  len_building_hive_reservoir_desc:0 "A $len_building_hive$ with observation devices to study all organisms living in the hive. The nano machines are reprogrammed to hold the hive in a stable state which allows nearly endless study of the organisms. In that state our scientists cannot use it to create life anymore. However they can learn much from that reservoir."
+ 
  len_building_lef_project_presentient:0 "Create Pre-Sentients"
  len_building_lef_project_presentient_desc:0 "Starts a Life Engineering Project to create a new species. All $len_building_hive$ will be consumed in the process. For each $len_building_hive$ a pop of the new species will be created."
  len_building_lef_project_sentient:0 "Create Sentients"
