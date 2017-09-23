@@ -89,7 +89,7 @@ len_create_random = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -136,7 +136,7 @@ len_create_mam = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -183,7 +183,7 @@ len_create_rep = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -230,7 +230,7 @@ len_create_avi = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -277,7 +277,7 @@ len_create_art = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -324,7 +324,7 @@ len_create_fun = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -371,7 +371,7 @@ len_create_mol = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -419,7 +419,7 @@ len_create_plant = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
@@ -466,7 +466,7 @@ len_create_hum = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presentient_trait
+					trait = random_presapient_trait
 				}
 				sapient = no
 			}
