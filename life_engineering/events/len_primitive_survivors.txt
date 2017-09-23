@@ -27,9 +27,13 @@ planet_event = {
 		
 		create_country = {
 			name = random
-			authority = event_target:project_owner
+			authority = random
 			species = event_target:primitive_species
 			ethos = event_target:project_owner
+			civics = {
+				civic = civic_secret_of_fire
+				civic = civic_the_wheel
+			}
 			flag = {
 				icon = {
 					category = "special"
@@ -170,8 +174,8 @@ country_event = {
 			remove_country_flag = len_hibernation_age
 			change_government = {
 				civics = {
-					civic = civic_secret_of_fire
-					civic = civic_the_wheel
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
 				}
 			}
 			set_country_flag = late_medieval_age
@@ -223,8 +227,8 @@ country_event = {
 			remove_country_flag = len_hibernation_age
 			change_government = {
 				civics = {
-					civic = civic_secret_of_fire
-					civic = civic_the_wheel
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
 				}
 			}
 			set_country_flag = late_medieval_age
