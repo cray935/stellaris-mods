@@ -253,11 +253,7 @@ len_building_lef_project_primitives_stone_age = {
 	required_resources = {
 		energy = 2
 	}
-	
-	potential = {
-		always = no
-	}
-	
+		
 	prerequisites = {
 		"len_tech_society_engineering"
 	}
@@ -287,11 +283,7 @@ len_building_lef_project_primitives_late_medieval_age = {
 	required_resources = {
 		energy = 2
 	}
-	
-	potential = {
-		always = no
-	}
-	
+		
 	prerequisites = {
 		"len_tech_society_engineering"
 	}
@@ -321,11 +313,7 @@ len_building_lef_project_primitives_industrial_age = {
 	required_resources = {
 		energy = 2
 	}
-	
-	potential = {
-		always = no
-	}
-	
+		
 	prerequisites = {
 		"len_tech_society_engineering"
 	}
