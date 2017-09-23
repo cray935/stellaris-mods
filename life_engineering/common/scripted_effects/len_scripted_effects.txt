@@ -91,7 +91,7 @@ len_create_random = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -138,7 +138,7 @@ len_create_mam = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -185,7 +185,7 @@ len_create_rep = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -232,7 +232,7 @@ len_create_avi = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -279,7 +279,7 @@ len_create_art = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -326,7 +326,7 @@ len_create_fun = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -373,7 +373,7 @@ len_create_mol = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -421,7 +421,7 @@ len_create_plant = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
@@ -468,7 +468,7 @@ len_create_hum = {
 					trait = len_trait_engineered
 					trait = random_presentient_trait
 				}
-				sentient = no
+				sapient = no
 			}
 		}
 	}
