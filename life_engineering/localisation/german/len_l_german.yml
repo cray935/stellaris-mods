@@ -168,3 +168,10 @@
  
  len_life_engineering_unit:0 "Life Engineering Remote Control"
  
+ # ##################################
+ # Primitive ages
+ # ##################################
+ 
+ len_hibernation_age:0 "Hibernation"
+ len_hibernation_age_desc:0 "This country was left for stasis. The population lies in sealed chambers and is waiting for their awakening."
+ 
