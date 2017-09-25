@@ -4,11 +4,10 @@ disable_precursor_events = {
 	set_country_flag = vultaum_intro
 }
 
-# Gives most vanilla techs to the current scope's country
+# Gives most vanilla techs to the current scope's country (usual techs)
 give_all_common_techs = {
 	give_technology = { tech = "tech_databank_uplinks" message = no }
 	give_technology = { tech = "tech_improved_databank_uplinks" message = no }
-	give_technology = { tech = "tech_basic_science_lab_1" message = no }
 	give_technology = { tech = "tech_physics_lab_1" message = no }
 	give_technology = { tech = "tech_physics_lab_2" message = no }
 	give_technology = { tech = "tech_physics_lab_3" message = no }
@@ -18,11 +17,10 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_cryostasis_2" message = no }
 	give_technology = { tech = "tech_self_aware_logic" message = no }
 	give_technology = { tech = "tech_automated_exploration" message = no }
+	give_technology = { tech = "tech_sapient_ai" message = no }
 	give_technology = { tech = "tech_combat_computers_1" message = no }
 	give_technology = { tech = "tech_combat_computers_2" message = no }
-	give_technology = { tech = "tech_combat_computers_3" message = no }
 	give_technology = { tech = "tech_synchronized_defences" message = no }
-	give_technology = { tech = "tech_fission_power" message = no }
 	give_technology = { tech = "tech_fusion_power" message = no }
 	give_technology = { tech = "tech_cold_fusion_power" message = no }
 	give_technology = { tech = "tech_antimatter_power" message = no }
@@ -39,7 +37,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_sensors_3" message = no }
 	give_technology = { tech = "tech_sensors_4" message = no }
 	give_technology = { tech = "tech_orbital_sensor_array" message = no }
-	give_technology = { tech = "tech_power_plant_1" message = no }
 	give_technology = { tech = "tech_power_plant_2" message = no }
 	give_technology = { tech = "tech_power_plant_3" message = no }
 	give_technology = { tech = "tech_power_plant_4" message = no }
@@ -97,8 +94,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_torpedoes_1" message = no }
 	give_technology = { tech = "tech_torpedoes_2" message = no }
 	give_technology = { tech = "tech_torpedoes_3" message = no }
-	give_technology = { tech = "tech_defense_army" message = no }
-	give_technology = { tech = "tech_eco_simulation" message = no }
 	give_technology = { tech = "tech_orbital_hydroponics" message = no }
 	give_technology = { tech = "tech_hydroponics" message = no }
 	give_technology = { tech = "tech_gene_crops" message = no }
@@ -108,7 +103,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_biolab_2" message = no }
 	give_technology = { tech = "tech_biolab_3" message = no }
 	give_technology = { tech = "tech_alien_life_studies" message = no }
-	give_technology = { tech = "tech_colonization_1" message = no }
 	give_technology = { tech = "tech_colonization_2" message = no }
 	give_technology = { tech = "tech_colonization_3" message = no }
 	give_technology = { tech = "tech_colonization_4" message = no }
@@ -155,7 +149,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_galactic_ambitions" message = no }
 	give_technology = { tech = "tech_interstellar_campaigns" message = no }
 	give_technology = { tech = "tech_galactic_campaigns" message = no }
-	give_technology = { tech = "tech_planetary_government" message = no }
 	give_technology = { tech = "tech_planetary_unification" message = no }
 	give_technology = { tech = "tech_colonial_centralization" message = no }
 	give_technology = { tech = "tech_galactic_administration" message = no }
@@ -175,7 +168,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_heritage_site" message = no }
 	give_technology = { tech = "tech_hypercomms_forum" message = no }
 	give_technology = { tech = "tech_autocurating_vault" message = no }
-	give_technology = { tech = "tech_spaceport_1" message = no }
 	give_technology = { tech = "tech_spaceport_2" message = no }
 	give_technology = { tech = "tech_spaceport_3" message = no }
 	give_technology = { tech = "tech_spaceport_4" message = no }
@@ -186,21 +178,17 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_strike_craft_1" message = no }
 	give_technology = { tech = "tech_strike_craft_2" message = no }
 	give_technology = { tech = "tech_strike_craft_3" message = no }
-	give_technology = { tech = "tech_assault_armies" message = no }
 	give_technology = { tech = "tech_ship_armor_1" message = no }
 	give_technology = { tech = "tech_ship_armor_2" message = no }
 	give_technology = { tech = "tech_ship_armor_3" message = no }
 	give_technology = { tech = "tech_ship_armor_4" message = no }
 	give_technology = { tech = "tech_ship_armor_5" message = no }
-	give_technology = { tech = "tech_thrusters_1" message = no }
 	give_technology = { tech = "tech_thrusters_2" message = no }
 	give_technology = { tech = "tech_thrusters_3" message = no }
 	give_technology = { tech = "tech_thrusters_4" message = no }
-	give_technology = { tech = "tech_space_defense_station_1" message = no }
 	give_technology = { tech = "tech_space_defense_station_2" message = no }
 	give_technology = { tech = "tech_space_defense_station_3" message = no }
 	give_technology = { tech = "tech_space_defense_station_improvement" message = no }
-	give_technology = { tech = "tech_basic_industry" message = no }
 	give_technology = { tech = "tech_powered_exoskeletons" message = no }
 	give_technology = { tech = "tech_mining_network_2" message = no }
 	give_technology = { tech = "tech_mining_network_3" message = no }
@@ -210,7 +198,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_engineering_lab_1" message = no }
 	give_technology = { tech = "tech_engineering_lab_2" message = no }
 	give_technology = { tech = "tech_engineering_lab_3" message = no }
-	give_technology = { tech = "tech_space_construction" message = no }
 	give_technology = { tech = "tech_afterburners_1" message = no }
 	give_technology = { tech = "tech_afterburners_2" message = no }
 	give_technology = { tech = "tech_mega_engineering" message = no }
