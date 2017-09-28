@@ -60,136 +60,85 @@ ancient_survived_system_initializer = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_ancient_survived_capital"
-				add_resource = {
-					resource = energy
-					amount = 1
-					replace = yes
-				}					
+				set_deposit = d_rich_energy_deposit
+				
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_agri_processing_complex"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}						
+					set_deposit = d_rich_farmland_deposit
 				}
+				
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_agri_processing_complex"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}							
+					set_deposit = d_rich_farmland_deposit
 				}
+				
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_dark_matter_power_plant"
-					add_resource = {
-						resource = energy
-						amount = 2
-						replace = yes
-					}						
+					set_deposit = d_rich_energy_deposit
 				}
+				
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_ancient_factory"
-					add_resource = {
-						resource = minerals
-						amount = 2
-						replace = yes
-					}						
+					set_deposit = d_rich_mineral_deposit
 				}			
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
-				set_building = "building_ancient_survived_lab"	
-				add_resource = {
-					resource = physics_research
-					amount = 1
-					replace = yes
-				}
-				add_resource = {
-					resource = society_research
-					amount = 1
-				}
-				add_resource = {
-					resource = engineering_research
-					amount = 1
-				}
+				set_building = "building_ancient_survived_lab"
+				set_deposit = d_all_research_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
-				set_building = "building_ancient_factory"
-				add_resource = {
-					resource = minerals
-					amount = 1
-					replace = yes
-				}						
+				set_building = "building_ancient_factory"			
+				set_deposit = d_rich_mineral_deposit	
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
-				set_building = "building_dark_matter_power_plant"
-				add_resource = {
-					resource = energy
-					amount = 1
-					replace = yes
-				}				
+				set_building = "building_dark_matter_power_plant"	
+				set_deposit = d_rich_energy_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_ruins"
-				add_resource = {
-					resource = engineering_research
-					amount = 1
-					replace = yes
-				}				
+				set_deposit = d_rich_energy_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_ruins"
-				add_resource = {
-					resource = society_research
-					amount = 1
-					replace = yes
-				}				
+				set_deposit = d_rich_mineral_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_ruins"
-				add_resource = {
-					resource = physics_research
-					amount = 1
-					replace = yes
-				}				
+				set_deposit = d_rich_farmland_deposit		
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_stasis_zone"
-				add_resource = {
-					resource = energy
-					amount = 2
-					replace = yes
-				}					
+				set_deposit = d_physics_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_stasis_zone"
-				add_resource = {
-					resource = food
-					amount = 2
-					replace = yes
-				}					
+				set_deposit = d_society_deposit
 			}
+			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_ancient_survived_stasis_zone"
-				add_resource = {
-					resource = minerals
-					amount = 2
-					replace = yes
-				}				
+				set_deposit = d_engineering_deposit
 			}			
 		}
 
