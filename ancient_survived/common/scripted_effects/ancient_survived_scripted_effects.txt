@@ -94,22 +94,10 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_torpedoes_1" message = no }
 	give_technology = { tech = "tech_torpedoes_2" message = no }
 	give_technology = { tech = "tech_torpedoes_3" message = no }
-	give_technology = { tech = "tech_orbital_hydroponics" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_hydroponics" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_gene_crops" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_nano_vitality_crops" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_nutrient_replication" message = no } # NOT has_authority = auth_machine_intelligence
 	give_technology = { tech = "tech_biolab_1" message = no }
 	give_technology = { tech = "tech_biolab_2" message = no }
 	give_technology = { tech = "tech_biolab_3" message = no }
 	give_technology = { tech = "tech_alien_life_studies" message = no }
-	give_technology = { tech = "tech_colonization_2" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_colonization_3" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_colonization_4" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_colonization_5" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_tomb_world_adaption" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_frontier_health" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_frontier_hospital" message = no } # NOT has_authority = auth_machine_intelligence
 	give_technology = { tech = "tech_tb_mountain_range" message = no }
 	give_technology = { tech = "tech_tb_volcano" message = no }
 	give_technology = { tech = "tech_tb_dangerous_wildlife" message = no }
@@ -124,18 +112,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_ecological_adaptation" message = no }
 	give_technology = { tech = "tech_climate_restoration" message = no }
 	give_technology = { tech = "tech_gaia_creation" message = no }
-	give_technology = { tech = "tech_genome_mapping" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_vitality_boosters" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_epigenetic_triggers" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_cloning" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_gene_banks" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_gene_seed_purification" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_morphogenetic_field_mastery" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_gene_tailoring" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_gene_expressions" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_glandular_acclimation" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_selected_lineages" message = no } # NOT has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_capacity_boosters" message = no } # NOT has_authority = auth_machine_intelligence
 	give_technology = { tech = "tech_doctrine_fleet_size_1" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_2" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_3" message = no }
@@ -217,21 +193,57 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_mine_dark_matter" message = no }
 }
 
-# Gives the techs from Synthetic Dawn
-give_ancient_building_techs = {
-	give_technology = { tech = "tech_robomodding_m" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_robomodding" message = no } # NOT has_ethic = "ethic_gestalt_consciousness"
-	give_technology = { tech = "tech_robomodding_points_1" message = no } # NOT has_ethic = "ethic_gestalt_consciousness"
-	give_technology = { tech = "tech_robomodding_points_2" message = no } # NOT has_ethic = "ethic_gestalt_consciousness"
-	give_technology = { tech = "tech_probability_theory" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_binary_motivators" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_nanite_assemblers" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_adaptive_combat_algorithms" message = no }  # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_biomechanics" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_singularity_core" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_modular_components" message = no } # has_authority = auth_machine_intelligence
-	give_technology = { tech = "tech_intelligent_factories" message = no } # has_authority = auth_machine_intelligence
+# Gives the organic only techs
+give_organic_only_techs = {
+	give_technology = { tech = "tech_orbital_hydroponics" message = no }
+	give_technology = { tech = "tech_hydroponics" message = no }
+	give_technology = { tech = "tech_gene_crops" message = no }
+	give_technology = { tech = "tech_nano_vitality_crops" message = no }
+	give_technology = { tech = "tech_nutrient_replication" message = no }
+	give_technology = { tech = "tech_genome_mapping" message = no }
+	give_technology = { tech = "tech_vitality_boosters" message = no }
+	give_technology = { tech = "tech_epigenetic_triggers" message = no }
+	give_technology = { tech = "tech_cloning" message = no }
+	give_technology = { tech = "tech_gene_banks" message = no }
+	give_technology = { tech = "tech_gene_seed_purification" message = no }
+	give_technology = { tech = "tech_morphogenetic_field_mastery" message = no }
+	give_technology = { tech = "tech_gene_tailoring" message = no }
+	give_technology = { tech = "tech_gene_expressions" message = no }
+	give_technology = { tech = "tech_glandular_acclimation" message = no }
+	give_technology = { tech = "tech_selected_lineages" message = no }
+	give_technology = { tech = "tech_capacity_boosters" message = no }
+	give_technology = { tech = "tech_colonization_2" message = no }
+	give_technology = { tech = "tech_colonization_3" message = no }
+	give_technology = { tech = "tech_colonization_4" message = no }
+	give_technology = { tech = "tech_colonization_5" message = no }
+	give_technology = { tech = "tech_tomb_world_adaption" message = no }
+	give_technology = { tech = "tech_frontier_health" message = no }
+	give_technology = { tech = "tech_frontier_hospital" message = no }
 }
+
+### SYNTHETIC DAWN ###
+
+# Gives the techs from Synthetic Dawn for non-gestalt ethics
+give_synthetic_dawn_not_gestalt_techs = {
+	give_technology = { tech = "tech_robomodding" message = no }
+	give_technology = { tech = "tech_robomodding_points_1" message = no }
+	give_technology = { tech = "tech_robomodding_points_2" message = no }
+}
+
+# Gives the techs from Synthetic Dawn for machine empires
+give_synthetic_dawn_machine_only_techs = {
+	give_technology = { tech = "tech_robomodding_m" message = no }
+	give_technology = { tech = "tech_probability_theory" message = no }
+	give_technology = { tech = "tech_binary_motivators" message = no }
+	give_technology = { tech = "tech_nanite_assemblers" message = no }
+	give_technology = { tech = "tech_adaptive_combat_algorithms" message = no } 
+	give_technology = { tech = "tech_biomechanics" message = no }
+	give_technology = { tech = "tech_singularity_core" message = no }
+	give_technology = { tech = "tech_modular_components" message = no }
+	give_technology = { tech = "tech_intelligent_factories" message = no }
+}
+
+### MODS ###
 
 # Gives the techs from the mod "Buildable Ancient Buildings"
 give_ancient_building_techs = {
