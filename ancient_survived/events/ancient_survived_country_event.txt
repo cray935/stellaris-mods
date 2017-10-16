@@ -14,6 +14,20 @@ country_event = {
 		give_all_common_techs = yes
 		give_ancient_building_techs = yes
 		
+		if = {
+			limit = { has_authority = auth_machine_intelligence }
+			give_synthetic_dawn_machine_only_techs = yes
+			
+			else = {
+				give_organic_only_techs = yes
+			}
+		}
+		
+		if = {
+			limit = { NOT = { has_ethic = "ethic_gestalt_consciousness" } }
+			give_synthetic_dawn_not_gestalt_techs = yes
+		}
+		
 		add_energy = 5000
 		add_minerals = 5000
 		add_food = 5000
