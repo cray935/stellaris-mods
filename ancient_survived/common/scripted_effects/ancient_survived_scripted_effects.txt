@@ -8,7 +8,12 @@ disable_precursor_events = {
 
 replace_all_caps = {
 	every_tile = {
-		limit = { has_building = "building_capital_1" }
+		limit = { 
+			OR = {
+				has_building = "building_capital_1"
+				has_building = "building_machine_capital_1"
+			}
+		}
 		set_building = "building_ancient_survived_capital"
 	}
 }
@@ -38,6 +43,27 @@ replace_all_labs = {
 	every_tile = {
 		limit = { has_building = "building_basic_science_lab_1" }
 		set_building = "building_ancient_survived_lab"
+	}
+}
+
+### BLOCKERS ###
+
+replace_all_dwellings = {
+	every_tile = {
+		limit = {
+			OR = {
+				has_blocker = "tb_decrepit_dwellings"
+				has_blocker = "tb_unsupervised_settlement"						
+			}
+		}
+		set_building = "tb_ancient_survived_stasis_zone"
+	}
+}
+
+replace_all_infrastructure = {
+	every_tile = {
+		limit = { has_blocker = "tb_failing_infrastructure" }
+		set_building = "tb_ancient_survived_ruins"
 	}
 }
 
