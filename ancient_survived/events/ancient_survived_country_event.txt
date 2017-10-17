@@ -50,3 +50,25 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = ancient_survived_country_event.200
+	title = "ancient_survived_country_event.200.name"
+	desc = "ancient_survived_country_event.200..desc"
+	picture = GFX_evt_throne_room
+	show_sound = event_alien_signal_05
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ancient_survived_country_event.200.a
+		hidden_effect = {
+			country_event = { id = "ancient_survived_country_event.100" }
+			country_event = { id = "ancient_survived_country_event.110" }
+		}
+	}
+	
+	option = {
+		name = ancient_survived_country_event.200.b
+	}
+}
