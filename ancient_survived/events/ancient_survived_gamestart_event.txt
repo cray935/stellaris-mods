@@ -27,7 +27,7 @@ event = {
 	immediate = {
 		every_country = {
 			limit = {
-				is_player = yes
+				is_ai = no
 				is_ancient_survivor = no
 			}
 			country_event = { id = ancient_survived_country_event.200 }
