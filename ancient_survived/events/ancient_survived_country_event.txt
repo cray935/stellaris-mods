@@ -25,6 +25,7 @@ country_event = {
 		
 		if = {
 			limit = { NOT = { has_ethic = "ethic_gestalt_consciousness" } }
+			give_not_gestalt_techs = yes
 			give_synthetic_dawn_not_gestalt_techs = yes
 		}
 		

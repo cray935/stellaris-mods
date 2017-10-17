@@ -286,6 +286,11 @@ give_organic_only_techs = {
 	give_technology = { tech = "tech_frontier_hospital" message = no }
 }
 
+give_not_gestalt_techs = {
+	give_technology = { tech = "tech_robotic_workers" message = no }
+	give_technology = { tech = "tech_droid_workers" message = no }
+}
+
 ### SYNTHETIC DAWN ###
 
 # Gives the techs from Synthetic Dawn for non-gestalt ethics
