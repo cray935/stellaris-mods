@@ -4,6 +4,45 @@ disable_precursor_events = {
 	set_country_flag = vultaum_intro
 }
 
+### BUILDINGS ###
+
+replace_all_caps = {
+	every_tile = {
+		limit = { has_building = "building_capital_1" }
+		set_building = "building_ancient_survived_capital"
+	}
+}
+
+replace_all_farms = {
+	every_tile = {
+		limit = { has_building = "building_hydroponics_farm_1" }
+		set_building = "building_agri_processing_complex"
+	}
+}
+
+replace_all_mines = {
+	every_tile = {
+		limit = { has_building = "building_mining_network_1" }
+		set_building = "building_ancient_factory"
+	}
+}
+
+replace_all_plants = {
+	every_tile = {
+		limit = { has_building = "building_power_plant_1" }
+		set_building = "building_dark_matter_power_plant"
+	}
+}
+
+replace_all_labs = {
+	every_tile = {
+		limit = { has_building = "building_basic_science_lab_1" }
+		set_building = "building_ancient_survived_lab"
+	}
+}
+
+### TECHS ###
+
 # Gives most vanilla techs to the current scope's country (usual techs)
 give_all_common_techs = {
 	give_technology = { tech = "tech_databank_uplinks" message = no }

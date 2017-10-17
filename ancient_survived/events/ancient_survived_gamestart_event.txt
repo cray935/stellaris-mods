@@ -13,6 +13,7 @@ event = {
 				is_ancient_survivor = yes
 			}
 			country_event = { id = ancient_survived_country_event.100 }
+			country_event = { id = ancient_survived_country_event.110 }
 		}
 	}
 }
