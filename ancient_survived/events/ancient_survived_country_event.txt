@@ -55,7 +55,7 @@ country_event = {
 country_event = {
 	id = ancient_survived_country_event.200
 	title = "ancient_survived_country_event.200.name"
-	desc = "ancient_survived_country_event.200..desc"
+	desc = "ancient_survived_country_event.200.desc"
 	picture = GFX_evt_throne_room
 	show_sound = event_alien_signal_05
 
