@@ -4,6 +4,71 @@ disable_precursor_events = {
 	set_country_flag = vultaum_intro
 }
 
+### BUILDINGS ###
+
+replace_all_caps = {
+	every_tile = {
+		limit = { 
+			OR = {
+				has_building = "building_capital_1"
+				has_building = "building_machine_capital_1"
+			}
+		}
+		set_building = "building_ancient_survived_capital"
+	}
+}
+
+replace_all_farms = {
+	every_tile = {
+		limit = { has_building = "building_hydroponics_farm_1" }
+		set_building = "building_agri_processing_complex"
+	}
+}
+
+replace_all_mines = {
+	every_tile = {
+		limit = { has_building = "building_mining_network_1" }
+		set_building = "building_ancient_factory"
+	}
+}
+
+replace_all_plants = {
+	every_tile = {
+		limit = { has_building = "building_power_plant_1" }
+		set_building = "building_dark_matter_power_plant"
+	}
+}
+
+replace_all_labs = {
+	every_tile = {
+		limit = { has_building = "building_basic_science_lab_1" }
+		set_building = "building_ancient_survived_lab"
+	}
+}
+
+### BLOCKERS ###
+
+replace_all_dwellings = {
+	every_tile = {
+		limit = {
+			OR = {
+				has_blocker = "tb_decrepit_dwellings"
+				has_blocker = "tb_unsupervised_settlement"						
+			}
+		}
+		set_building = "tb_ancient_survived_stasis_zone"
+	}
+}
+
+replace_all_infrastructure = {
+	every_tile = {
+		limit = { has_blocker = "tb_failing_infrastructure" }
+		set_building = "tb_ancient_survived_ruins"
+	}
+}
+
+### TECHS ###
+
 # Gives most vanilla techs to the current scope's country (usual techs)
 give_all_common_techs = {
 	give_technology = { tech = "tech_databank_uplinks" message = no }

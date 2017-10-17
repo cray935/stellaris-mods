@@ -1,12 +1,5 @@
-
 on_game_start = {
 	events = {
 		ancient_survived_gamestart_event.100
-	}
-}
-
-empire_init_create_capital_pops = {
-	events = {
-		ancient_survived_gamestart_event.110
 	}
 }
