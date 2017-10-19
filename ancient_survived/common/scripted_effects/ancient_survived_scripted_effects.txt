@@ -56,14 +56,14 @@ replace_all_dwellings = {
 				has_blocker = "tb_unsupervised_settlement"						
 			}
 		}
-		set_building = "tb_ancient_survived_stasis_zone"
+		set_blocker = "tb_ancient_survived_stasis_zone"
 	}
 }
 
 replace_all_infrastructure = {
 	every_tile = {
 		limit = { has_blocker = "tb_failing_infrastructure" }
-		set_building = "tb_ancient_survived_ruins"
+		set_blocker = "tb_ancient_survived_ruins"
 	}
 }
 
