@@ -25,6 +25,7 @@ country_event = {
 		
 		if = {
 			limit = { NOT = { has_ethic = "ethic_gestalt_consciousness" } }
+			give_not_gestalt_techs = yes
 			give_synthetic_dawn_not_gestalt_techs = yes
 		}
 		
@@ -48,5 +49,27 @@ country_event = {
 			replace_all_plants = yes
 			replace_all_labs = yes
 		}
+	}
+}
+
+country_event = {
+	id = ancient_survived_country_event.200
+	title = "ancient_survived_country_event.200.name"
+	desc = "ancient_survived_country_event.200.desc"
+	picture = GFX_evt_throne_room
+	show_sound = event_alien_signal_05
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ancient_survived_country_event.200.a
+		hidden_effect = {
+			country_event = { id = "ancient_survived_country_event.100" }
+			country_event = { id = "ancient_survived_country_event.110" }
+		}
+	}
+	
+	option = {
+		name = ancient_survived_country_event.200.b
 	}
 }

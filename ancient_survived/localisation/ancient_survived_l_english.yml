@@ -13,3 +13,8 @@
  tb_ancient_survived_stasis_zone:0 "£blocker Stasis Chambers"
  tb_ancient_survived_stasis_zone_desc:0 "These defect stasis chambers provided big service for survival of an advanced species in the past. But now they are unusable and have to be removed so the landscape can be worked on again."
  
+ ancient_survived_country_event.200.name:0 "Survived through Ages"
+ ancient_survived_country_event.200.desc:0 "Your species looks like it survived the past. May I ask you, are your ancient survivors?"
+ ancient_survived_country_event.200.a:0 "§GYes, we are.§!"
+ ancient_survived_country_event.200.b:0 "§RNo, we are not.§!"
+ 

@@ -17,3 +17,20 @@ event = {
 		}
 	}
 }
+
+event = {
+	id = ancient_survived_gamestart_event.110
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+				is_ancient_survivor = no
+			}
+			country_event = { id = ancient_survived_country_event.200 }
+		}
+	}
+}

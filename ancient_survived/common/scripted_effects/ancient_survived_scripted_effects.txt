@@ -56,14 +56,14 @@ replace_all_dwellings = {
 				has_blocker = "tb_unsupervised_settlement"						
 			}
 		}
-		set_building = "tb_ancient_survived_stasis_zone"
+		set_blocker = "tb_ancient_survived_stasis_zone"
 	}
 }
 
 replace_all_infrastructure = {
 	every_tile = {
 		limit = { has_blocker = "tb_failing_infrastructure" }
-		set_building = "tb_ancient_survived_ruins"
+		set_blocker = "tb_ancient_survived_ruins"
 	}
 }
 
@@ -284,6 +284,11 @@ give_organic_only_techs = {
 	give_technology = { tech = "tech_tomb_world_adaption" message = no }
 	give_technology = { tech = "tech_frontier_health" message = no }
 	give_technology = { tech = "tech_frontier_hospital" message = no }
+}
+
+give_not_gestalt_techs = {
+	give_technology = { tech = "tech_robotic_workers" message = no }
+	give_technology = { tech = "tech_droid_workers" message = no }
 }
 
 ### SYNTHETIC DAWN ###
