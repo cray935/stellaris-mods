@@ -49,7 +49,7 @@ len_tech_life_engineering = {
 	area = society
 	tier = 3
 	category = { biology }	
-	prerequisites = { "tech_epigenetic_triggers" }
+	prerequisites = { }
 	weight = @tier3weight1
 	
 	feature_flags = {
