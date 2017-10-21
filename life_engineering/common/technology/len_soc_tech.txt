@@ -45,12 +45,12 @@
 
 len_tech_life_engineering = {
 	icon = "tech_gene_tailoring"
-	cost = @tier3cost1
+	cost = @tier3cost2
 	area = society
 	tier = 3
 	category = { biology }	
-	prerequisites = { "tech_epigenetic_triggers" }
-	weight = @tier3weight1
+	prerequisites = { }
+	weight = @tier3weight2
 	
 	feature_flags = {
 		len_create_pre_sentient
