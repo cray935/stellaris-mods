@@ -1,0 +1,60 @@
+@enlighten_soc_cost = 5
+@enlighten_nrg_cost = 5
+
+# Covert Infiltration
+covert_infiltration = {
+	icon = "GFX_fleet_task_covert_infiltration_action"
+	small_icon = 4
+	
+	cost = {
+		society_research = @enlighten_soc_cost
+		energy = @enlighten_nrg_cost
+	}
+
+	monthly_progress = 0.02
+	completion_event = observation.3009
+
+	potential = {
+		NOR = { 
+			has_valid_civic = civic_inwards_perfection
+			has_authority = auth_machine_intelligence # It seems to be wrong that machines can genetically modify themselves
+			has_country_flag = synthetic_empire
+		}
+	}
+
+	valid = {
+		has_technology = tech_gene_tailoring
+		OR = {
+			has_policy_flag = interference_active
+			has_policy_flag = interference_full
+		}
+		FROM = {
+			exists = owner
+			owner = {
+				OR = {
+					has_country_flag = industrial_age
+					has_country_flag = machine_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
+			}
+		}
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = infiltrator }
+		}
+		modifier = {
+			factor = 0
+			energy < 1000
+		}
+	}
+}
