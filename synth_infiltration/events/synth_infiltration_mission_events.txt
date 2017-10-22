@@ -1,0 +1,48 @@
+
+namespace = synth_infiltration_mission_events
+
+country_event = {
+	id = synth_infiltration_mission_events.100
+	title = "synth_infiltration_mission_events.100.name"
+	desc = "synth_infiltration_mission_events.100.desc"
+	picture = GFX_evt_metropolis
+	show_sound = event_cityscape
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROMFROM = {
+			owner = {
+				save_event_target_as = primitive_civ
+			}
+			add_modifier = { modifier = infiltration_happiness days = 7300 }
+			random_pop = { save_event_target_as = prim_species }
+			observation_outpost = { dismantle = yes }
+			set_owner = ROOT
+			remove_all_armies = yes
+			create_army = {
+				name = random
+				owner = ROOT
+				type = "android_defense_army"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_capital_1"
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+				}
+			}
+			event_target:primitive_civ = { destroy_country = yes }
+		}
+	}
+	
+	option = {
+		name = "synth_infiltration_mission_events.100.a"
+	}
+}
