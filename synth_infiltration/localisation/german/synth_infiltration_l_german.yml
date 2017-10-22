@@ -1,0 +1,9 @@
+﻿l_german:
+ 
+ # Events
+ 
+ synth_infiltration_mission_events.100.name:0 "[From.GetName]: Infiltration abgeschlossen"
+ synth_infiltration_mission_events.100.desc:0 "Nachdem wir die vollständige Kontrolle über die politische Führung der [prim_species.GetSpeciesName] hatten, bahnten unsere Infiltrationszellen unserer Erstkontakteinheit erfolgreich den Weg.\n\nBei einer verschwenderischen Zeremonie, die in der neuen planetaren Hauptstadt abgehalten wurde, akzeptierte unser diplomatischer Botschafter eine von allen Anführern auf [From.GetName] unterschriebene Petition, mit der sie um sofortige Annektierung des [From.GetPlanetMoon] ins [Root.GetName] baten. Die Straßen sind voller glücklicher Bürger, die ihren neuen Alien-Wohltätern zujubeln."
+ synth_infiltration_mission_events.100.a:0 "Gratulation an alle Infiltrationszellen für ihre gute Arbeit."
+ 
+ 
