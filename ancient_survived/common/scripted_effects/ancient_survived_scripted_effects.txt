@@ -53,7 +53,10 @@ replace_all_dwellings = {
 		limit = {
 			OR = {
 				has_blocker = "tb_decrepit_dwellings"
-				has_blocker = "tb_unsupervised_settlement"						
+				has_blocker = "tb_unsupervised_settlement"
+				has_blocker = "tb_strip_mine"
+				has_blocker = "tb_former_battlefield"
+				has_blocker = "tb_collapsed_burrows"
 			}
 		}
 		set_blocker = "tb_ancient_survived_stasis_zone"
@@ -62,7 +65,13 @@ replace_all_dwellings = {
 
 replace_all_infrastructure = {
 	every_tile = {
-		limit = { has_blocker = "tb_failing_infrastructure" }
+		limit = {
+			OR = { 
+				has_blocker = "tb_failing_infrastructure"
+				has_blocker = "tb_assimilators_ruins"
+				has_blocker = "tb_exterminators_ruins"
+			}
+		}
 		set_blocker = "tb_ancient_survived_ruins"
 	}
 }
