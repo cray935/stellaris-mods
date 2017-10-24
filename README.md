@@ -8,6 +8,6 @@ All released mods are published at [Steam's Workshop](http://steamcommunity.com/
 Mod-Name | Mod-Version | Game-Version
 --- | :---: | :---:
 Planetary Extermination | 1.2.7 | 1.8.0
-Life Engineering | 1.9.1 | 1.8.2
+Life Engineering | 1.9.2 | 1.8.2
 Forgiveable Ascension | 1.0.0 | 1.6.2
 Survived through Ages | 1.1.1 | 1.8.2
