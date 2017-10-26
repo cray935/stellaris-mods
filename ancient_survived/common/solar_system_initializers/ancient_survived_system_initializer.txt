@@ -75,6 +75,7 @@ ancient_survived_servitor = {
 	usage = custom_empire
 	name = "NAME_Alpha_Refuge"
 	class = "rl_standard_stars"
+	flags = { empire_home_system ancient_survived_system }
 	
 	# TODO: Only for servitors
 	
