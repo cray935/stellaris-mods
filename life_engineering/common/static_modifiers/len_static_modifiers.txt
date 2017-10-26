@@ -4,7 +4,7 @@ len_prevent_growth = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
 	icon_frame = 3
 
-	pop_growth_speed = -10
+	pop_growth_speed = -1
 }
 
 len_scourge_fed = {
