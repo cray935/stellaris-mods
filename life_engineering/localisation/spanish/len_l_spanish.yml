@@ -1,0 +1,177 @@
+﻿l_spanish:
+
+ # ##################################
+ # Technologies
+ # ##################################
+ 
+ len_tech_life_engineering:0 "Life Engineering"
+ len_tech_life_engineering_desc:0 "With these techniques we can engineer life of pre-sentient state. Now we can send out our scientists to populate foreign worlds with adapted species."
+ len_tech_society_engineering:0 "Society Engineering"
+ len_tech_society_engineering_desc:0 "After learning how to create life we can improve the procedure to create primitive but sentient species."
+ len_tech_society_uplift:0 "Society Uplifting"
+ len_tech_society_uplift_desc:0 "Smart teaching strategies and continuous improvement lead to more advanced societies."
+ len_tech_promethean_project:0 "The Promethean Strain"
+ len_tech_promethean_project_desc:0 "A very advanced gene strain that could be integrated into a living species to make it a powerful race. However some of our experts have concerns using this strain."
+ 
+ # ##################################
+ # Feature Flags
+ # ##################################
+ 
+ len_create_pre_sentient:0 "Create Pre-Sentients"
+ len_create_pre_sentient_desc:0 "Allows our scientists to engineer pre-sentient species on uncolonised worlds."
+ len_create_pre_ftl:0 "Create Primitives"
+ len_create_pre_ftl_desc:0 "Allows our scientists to engineer primitive species on uncolonised worlds."
+ len_society_uplift:0 "Advance primitive societies"
+ len_society_uplift_desc:0 "Allows observation missions to advance primitive species to next stage of evolution."
+ 
+ # ##################################
+ # Traits
+ # ##################################
+ 
+ len_trait_engineered:0 "Engineered"
+ len_trait_engineered_desc:0 "§LThis species was designed and created by an advanced race.§!\n"
+ len_trait_life_engineering_unit:0 "Life Engineering Monitor"
+ len_trait_life_engineering_unit_desc:0 "§LThis unit is equipped with high tech devices to research genetics faster than most machines can.§!\n"
+ len_trait_engineered_scourge:0 "Engineered Scourge"
+ len_trait_engineered_scourge_desc:0 "§LThis species was designed to be a biological weapon eating any other species without the same biological strains. It's not designed to be able for any other tasks.§!\n"
+ len_trait_promethean:0 "Promethean"
+ len_trait_promethean_desc:0 "This species was heavily engineered to become a robust and intelligent race."
+ 
+ # ##################################
+ # Special Projects
+ # ##################################
+ 
+ len_project_life_engineering:0 "Engineer pre-sentient life"
+ len_project_life_engineering_DESC:0 "Our scientists will develop a simple species. The species will fit into the environment perfectly."
+ 
+ len_project_society_engineering:0 "Engineer primitive life"
+ len_project_society_engineering_DESC:0 "Our scientists will develop a kind of intelligent species which fill fit into the environment perfectly."
+ 
+ len_lef_project_create_society:0 "Create primitive society on [ROOT.GetName]"
+ len_lef_project_create_society_DESC:0 "Our scientists prepared a project to build a primitive society on this planet. After the process the population will not remember most advanced parts of life."
+ 
+ # ##################################
+ # Events
+ # ##################################
+ 
+ len_life_engineering.1.name:0 "Life Engineering Opportunity"
+ len_life_engineering.1.desc:0 "Our scientists think they can deploy new life here. Should we prepare a project?"
+ len_life_engineering.1.a:0 "Yes, prepare the planet for deploying §Ypre-sentient§! life."
+ len_life_engineering.1.b:0 "Yes, prepare the planet for deploying §Yprimitive§! life."
+ len_life_engineering.1.abort:0 "No, do not prepare any projects here."
+ len_life_engineering.11.name:0 "Species created"
+ len_life_engineering.11.desc:0 "Our scientists finished the engineering of the pre-sentient species on §Y[len_species_planet.GetName]§!. Our lead engineer calls them [len_species.GetName] and recommends to uplift these creatures to integrate them in our society."
+ len_life_engineering.101.name:0 "Primitives created"
+ len_life_engineering.101.desc:0 "Our scientists finished the engineering of the primitive alien proto-civilization on §Y[len_species_planet.GetName]§!. They report that their Neolithic culture has mastered fire and developed a rudimentary spoken language, hopefully they will develop their society soon.\n\nWe should consider building an §YObservation Post§! above their world to study them more closely."
+ 
+ len_life_seed_events.2.name:0 "Maturing life seeds"
+ len_life_seed_events.2.desc:0 "The $len_building_life_engineering_facility$ on §Y[ROOT.GetName]§! has reported that all $len_building_life_seed$s are fully grown into mature environments. This is an important milestone in the Life Engineering Project on the planet. We can now activate our devices to finalize the project."
+ 
+ len_life_creator.0.name:0 "Creating life"
+ len_life_creator.0.desc:0 "Our scientists are preparing the last steps to create new life on §Y[ROOT.GetName]§!. You can now choose which kind of species our scientists should engineer."
+ len_life_creator.100.name:0 "New species developed"
+ len_life_creator.100.desc:0 "The Life Engineering Team is happy to announce our new §Y[len_species.GetClass]§! species. Several individuals of the species called §Y[len_species.GetName]§! are now wandering around [len_species_planet.GetName]."
+ 
+ len_lef_project_events.2.name:0 "Life Engineering starting"
+ len_lef_project_events.2.desc:0 "Our scientists prepared this project so well and are going to start work. They will need some time for the process but we will inform you when it's complete."
+ len_lef_project_events.5.name:0 "Engineered Titans"
+ len_lef_project_events.5.desc:0 "Our scientists finished the titanic life form. These creatures are of enormous size so we just created a few. After releasing them into the wilderness they are on their own."
+ len_lef_project_events.6.name:0 "The Promethean Project"
+ len_lef_project_events.6.desc:0 "We finally found a match for the promethean strain under our test subjects. Its body accepted the modification and is now evolving to a new kind of living. However all other subjects are dying because of extreme mutations. That seems to be a result of rejecting the promethean gene strain."
+ len_lef_project_events.8.name:0 "Primitives Project starting"
+ len_lef_project_events.8.desc:0 "The science center on [ROOT.GetName] initiated a project to form a primitive society on this planet. Our experts indoctrinate the population to forget their memories of former life. It will take some time but they will become primitives in the process."
+ 
+ len_primitive_survivors.10.name:0 "Hibernating population"
+ len_primitive_survivors.10.desc:0 "The primitives project does well on [ROOT.GetName]. The plaque destroyed"
+ len_primitive_survivors.110.name:0 ""
+ len_primitive_survivors.110.desc:0 ""
+ 
+ # ##################################
+ # Edicts
+ # ##################################
+ 
+ edict_len_edict_prevent_growth:0 "Prevent population growth"
+ edict_len_edict_prevent_growth_desc:1 "Adds a modifier to the planet preventing pops from growing."
+ edict_len_edict_undo_prevent_growth:0 "Prevent population growth"
+ edict_len_edict_undo_prevent_growth_desc:1 "Removes the modifier for preventing pops from growing."
+ edict_len_edict_prevent_life_engineering_event:0 "Disable Life Engineering Event"
+ edict_len_edict_prevent_life_engineering_event_desc:1 "If enabled our science ships will no longer ask you if they should prepare a Life Engineering Project on planets."
+ 
+ # ##################################
+ # Observation Missions
+ # ##################################
+ 
+ mission_len_society_advance_1:0 "Advance Society"
+ mission_len_society_advance_1_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_2:0 "Advance Society"
+ mission_len_society_advance_2_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_3:0 "Advance Society"
+ mission_len_society_advance_3_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_4:0 "Advance Society"
+ mission_len_society_advance_4_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_5:0 "Advance Society"
+ mission_len_society_advance_5_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_6:0 "Advance Society"
+ mission_len_society_advance_6_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_7:0 "Advance Society"
+ mission_len_society_advance_7_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_8:0 "Advance Society"
+ mission_len_society_advance_8_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ mission_len_society_advance_9:0 "Advance Society"
+ mission_len_society_advance_9_desc:0 "Our scientists teach the species so that the primitives can reach the next stage in their evolution."
+ 
+ # ##################################
+ # Buildings
+ # ##################################
+ 
+ len_building_lef_project_requirement:0 "§LAll $len_building_life_seed$s must be grown and at least one $len_building_hive$ must exist on the planet.§!"
+ len_building_life_engineering_in_progress:0 "§LLife Engineering Project still in progress.§!"
+ len_promethian_project_requirement_planet:0 "§LThe planet must have at least §Y10§! biological pops to have enough test subjects.§!"
+ len_promethian_project_requirement_tile:0 "§LFacility must have a biological pop for the modification to apply.§!"
+ 
+ len_building_life_engineering_facility:0 "Life Engineering Facility"
+ len_building_life_engineering_facility_desc:0 "A laboratory to engineer new species with new experimental technologies."
+ 
+ len_building_life_seed:0 "Life Seed"
+ len_building_life_seed_desc:0 "A facility with some life pods and a life seed device. A cluster of nano machines maintaines the life seed and help it growing. The seed will eventually grow until it becomes a mature environment to create life."
+ 
+ len_building_hive:0 "Life Engineering Hive"
+ len_building_hive_desc:0 "A mature environment of a $len_building_life_seed$. In the hive live several biological mirco organisms who represent early life forms and the beginning of evolution. The whole environment is maintained by nano machines. Our scientists can use this hive to create life or harvest it for more research."
+ len_building_hive_reservoir:0 "Life Engineering Hive Reservoir"
+ len_building_hive_reservoir_desc:0 "A $len_building_hive$ with observation devices to study all organisms living in the hive. The nano machines are reprogrammed to hold the hive in a stable state which allows nearly endless study of the organisms. In that state our scientists cannot use it to create life anymore. However they can learn much from that reservoir."
+ 
+ len_building_lef_project_presentient:0 "Create Pre-Sentients"
+ len_building_lef_project_presentient_desc:0 "Starts a Life Engineering Project to create a new species. All $len_building_hive$ will be consumed in the process. For each $len_building_hive$ a pop of the new species will be created."
+ len_building_lef_project_sentient:0 "Create Sentients"
+ len_building_lef_project_sentient_desc:0 "Starts a Life Engineering Project to create a new species. All $len_building_hive$ will be consumed in the process. For each $len_building_hive$ a pop of the new species will be created."
+ len_building_lef_project_titanic:0 "Create Titanic Life"
+ len_building_lef_project_titanic_desc:0 "Starts a Life Engineering Project to create huge creatures on this world. After the process the titanic life forms will be released to the nature."
+ len_building_lef_project_promethean:0 "The Promethean Project"
+ len_building_lef_project_promethean_desc:0 "Starts a Life Engineering Project to modify a species with experimental genes. The modification will be applied to the pop operating the facility."
+ len_building_lef_project_primitives_stone_age:0 "Primitive Society (Stone Age)"
+ len_building_lef_project_primitives_stone_age_desc:0 "Starts a Society Engineering Project to let the community on this planet regress to a primitive age. Our team will erase every signs of progress."
+ len_building_lef_project_primitives_late_medieval_age:0 "Primitive Society (Medieval)"
+ len_building_lef_project_primitives_late_medieval_age_desc:0 "$len_building_lef_project_primitives_stone_age_desc$"
+ len_building_lef_project_primitives_industrial_age:0 "Primitive Society (Industrial)"
+ len_building_lef_project_primitives_industrial_age_desc:0 "$len_building_lef_project_primitives_stone_age_desc$"
+ 
+ # ##################################
+ # Static Modifiers
+ # ##################################
+
+ len_prevent_growth:0 "Prevent population growth"
+ len_prevent_growth_desc:0 "Our scientists needs the space for their life engineering projects so population cannot grow anymore."
+ 
+ # ##################################
+ # Species Classes
+ # ##################################
+ 
+ len_life_engineering_unit:0 "Life Engineering Remote Control"
+ 
+ # ##################################
+ # Primitive ages
+ # ##################################
+ 
+ len_hibernation_age:0 "Hibernation"
+ len_hibernation_age_desc:0 "This country was left for stasis. The population lies in sealed chambers and is waiting for their awakening."
+ 
