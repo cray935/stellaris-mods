@@ -2,6 +2,8 @@
  
  ancient_survived_system_initializer_NAME:0 "Ancient Sanctuary"
  ancient_survived_system_initializer_DESC:0 "Reguge system of a fallen civilisation. Stasis chambers on the only habitable planet keep the otherwise extinct species alive."
+ ancient_survived_servitor_NAME:0 "Ancient Servitor"
+ ancient_survived_servitor_DESC:0 "The starting system of fallen Servitors"
  
  building_ancient_survived_lab:0 "Research Matrix"
  building_ancient_survived_lab_desc:0 "A backup system of a former huge research network with plenty of data from previous scientific break throughs."
