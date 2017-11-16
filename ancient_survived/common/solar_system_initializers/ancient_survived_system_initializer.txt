@@ -175,7 +175,23 @@ ancient_survived_servitor = {
 				type = "machine_defense_2"
 			}
 			spaceport = {
-				set_spaceport_level = 6			
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "engineering_bay"
+				}					
 			}
 		}
 	}
@@ -246,6 +262,22 @@ ancient_survived_servitor = {
 			}
 			spaceport = {
 				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "engineering_bay"
+				}					
 			}			
 		}
 	}
@@ -314,7 +346,23 @@ ancient_survived_servitor = {
 				owner = ROOT
 			}
 			spaceport = {
-				set_spaceport_level = 6			
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "engineering_bay"
+				}					
 			}
 		}
 	}
