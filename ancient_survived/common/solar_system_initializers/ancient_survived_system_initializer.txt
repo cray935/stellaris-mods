@@ -71,325 +71,140 @@ ancient_survived_system_initializer = {
 	}
 }
 
-ancient_survived_servitor = {
-	usage = custom_empire
-	name = "NAME_Alpha_Refuge"
-	class = "rl_standard_stars"
+ancient_survived_ringworld = {
+	class = "sc_g"
+	asteroids_distance = 150
 	flags = { empire_home_system ancient_survived_system }
 	
-	# TODO: Only for servitors
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 	
 	planet = {
 		class = star
 		orbit_distance = 0
-		orbit_angle = 0		
+		orbit_angle = 1
+		size = 30
+		has_ring = no
 	}
-	
+
 	change_orbit = 45
-	
+		
 	planet = {
-		class = "pc_ringworld_tech"
-		name = "NAME_Circuit_I"
-		orbit_angle = 30
-		orbit_distance = 0
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "NAME_Superstructure_I"
-		orbit_angle = 30
-		orbit_distance = 0
-	}	
-	planet = {
+		name = "Segment-A"
 		class = "pc_ringworld_habitable"
-		name = "NAME_Alpha_Complex"
-		orbit_angle = 30
+		size = 25
 		orbit_distance = 0
+		starting_planet = yes
+		has_ring = no
 		tile_blockers = none
 		modifiers = none
 		
 		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			generate_start_buildings_and_blockers = yes	
+		}
 
-			create_cluster = {
-				id = fe_mach_cluster
-				radius = 80
-				center = this.solar_system
-			}
-
-			prevent_anomaly = yes
-			set_owner = ROOT
-			set_capital = yes
-			while = {
-				count = 5
-				random_tile = {
-					limit = { has_building = no has_blocker = no }
-					set_building = "building_agri_processing_complex"
-					set_deposit = d_farmland_deposit					
-					create_pop = { 
-						species = owner_main_species
-					}			
-				}				
-			}
-			while = {
-				count = 5
-				random_tile = {				
-					limit = { has_building = no has_blocker = no has_pop = no }		
-					set_building = "building_dark_matter_power_plant"
-					set_deposit = d_energy_deposit
-					create_pop = { 
-						species = owner_main_species
-					}
-				}
-			}				
-			every_tile = {
-				limit = { has_building = no has_blocker = no has_pop = no }			
-				set_blocker = tb_ancient_cryo_chambers
-			}			
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			spaceport = {
-				set_spaceport_level = 6		
-				set_spaceport_module = {
-					slot = 1
-					module = "crew_quarters"
-				}	
-				set_spaceport_module = {
-					slot = 2
-					module = "fleet_academy"
-				}
-				set_spaceport_module = {
-					slot = 3
-					module = "synchronized_defenses"
-				}
-				set_spaceport_module = {
-					slot = 4
-					module = "engineering_bay"
-				}					
-			}
-		}
 	}
+	
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "NAME_Circuit_II"
+		name = "Segment-B"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
+	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "NAME_Superstructure_II"
+		name = "Segment-C"
 		orbit_angle = 30
-		orbit_distance = 0
+		orbit_distance = 0		
 	}
+	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "NAME_Production_Unit"
+		name = "Segment-D"
 		orbit_angle = 30
 		orbit_distance = 0
 		tile_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			set_owner = ROOT
-			every_tile = {
-				limit = { has_building = no has_blocker = no has_pop = no }		
-				set_building = "building_ancient_factory"
-				set_deposit = d_energy_deposit
-				create_pop = { 
-					species = owner_main_species
-				}							
-			}		
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_spaceport = {
-				owner = ROOT
-				initial_module = "fallen_empire_weapon"
-			}
-			spaceport = {
-				set_spaceport_level = 6		
-				set_spaceport_module = {
-					slot = 1
-					module = "crew_quarters"
-				}	
-				set_spaceport_module = {
-					slot = 2
-					module = "fleet_academy"
-				}
-				set_spaceport_module = {
-					slot = 3
-					module = "synchronized_defenses"
-				}
-				set_spaceport_module = {
-					slot = 4
-					module = "engineering_bay"
-				}					
-			}			
-		}
 	}
+	
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "NAME_Circuit_III"
+		name = "Segment-E"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
+	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "NAME_Superstructure_III"
+		name = "Segment-F"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
+	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "NAME_Processing_Unit"
+		name = "Segment-G"
 		orbit_angle = 30
 		orbit_distance = 0
 		tile_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-			set_owner = ROOT
-			every_tile = {
-				limit = { has_building = no has_blocker = no has_pop = no }		
-				set_building = "building_dark_matter_power_plant"
-				set_deposit = d_energy_deposit	
-				create_pop = { 
-					species = owner_main_species
-				}							
-			}		
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_army = {
-				name = random
-				owner = ROOT
-				species = ROOT
-				type = "machine_defense_2"
-			}
-			create_spaceport = {
-				owner = ROOT
-			}
-			spaceport = {
-				set_spaceport_level = 6		
-				set_spaceport_module = {
-					slot = 1
-					module = "crew_quarters"
-				}	
-				set_spaceport_module = {
-					slot = 2
-					module = "fleet_academy"
-				}
-				set_spaceport_module = {
-					slot = 3
-					module = "synchronized_defenses"
-				}
-				set_spaceport_module = {
-					slot = 4
-					module = "engineering_bay"
-				}					
-			}
-		}
 	}
 	
-	init_effect = {
-		spawn_megastructure = {
-			type = "ring_world_ruined"
-			orbit_angle = 330
-			orbit_distance = 45
-			location = planet
-		}	
-	}	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Segment-H"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Segment-I"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Segment-J"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Segment-K"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Segment-L"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
 	
 	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "fallen_machine_2"
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
 	}
+	
 	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "fallen_machine_3"
-	}	
-	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "fallen_machine_4"
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_t1_first_colony"
 	}
-	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "fallen_machine_5"
-	}	
 }

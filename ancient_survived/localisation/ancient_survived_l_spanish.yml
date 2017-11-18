@@ -2,8 +2,8 @@ l_spanish:
  
  ancient_survived_system_initializer_NAME:0 "Antiguo santuario"
  ancient_survived_system_initializer_DESC:0 "Sistema de refugio de una civilización caída. Cámaras de éstasis  en el único planeta habitable guardan a esta especie de la extinción."
- ancient_survived_servitor_NAME:0 "Ancient Servitor"
- ancient_survived_servitor_DESC:0 "The starting system of fallen Servitors"
+ ancient_survived_ringworld_NAME:0 "Ancient Ringworld"
+ ancient_survived_ringworld_DESC:0 "Ancient survivors on a ringworld with 3 habitable and 1 damaged segments."
  
  building_ancient_survived_lab:0 "Matrix de investigación"
  building_ancient_survived_lab_desc:0 "Un sistema de respaldo de una anterior e inmensa red de investigación, plena de datos de descubrimientos científicos previos."
