@@ -90,20 +90,19 @@ ancient_survived_ringworld = {
 	planet = {
 		class = star
 		orbit_distance = 0
-		orbit_angle = 1
-		size = 30
-		has_ring = no
+		orbit_angle = 0
 	}
 
 	change_orbit = 45
-		
+	
 	planet = {
 		name = "NAME_Ring_Section_A"
 		class = "pc_ringworld_habitable"
-		size = 25
+		orbit_angle = 30
 		orbit_distance = 0
-		starting_planet = yes
+		size = 25
 		has_ring = no
+		starting_planet = yes
 		tile_blockers = none
 		modifiers = none
 		
@@ -126,7 +125,7 @@ ancient_survived_ringworld = {
 		class = "pc_ringworld_seam"
 		name = "NAME_Ring_Section"
 		orbit_angle = 30
-		orbit_distance = 0		
+		orbit_distance = 0
 	}
 	
 	planet = {
@@ -138,7 +137,7 @@ ancient_survived_ringworld = {
 		modifiers = none
 		
 		init_effect = {
-			generate_ancient_survived_ruins = yes	
+			generate_ancient_survived_ruins = yes
 		}
 	}
 	
@@ -165,7 +164,7 @@ ancient_survived_ringworld = {
 		modifiers = none
 		
 		init_effect = {
-			generate_ancient_survived_ruins = yes	
+			generate_ancient_survived_ruins = yes
 		}
 	}
 	
@@ -177,31 +176,47 @@ ancient_survived_ringworld = {
 	}
 	
 	planet = {
-		class = "pc_ringworld_seam"
+		class = "pc_ringworld_seam_damaged"
 		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = THIS
+			}
+		}
 	}
 	
 	planet = {
-		class = "pc_ringworld_habitable"
+		class = "pc_ringworld_habitable_damaged"
 		name = "NAME_Ring_Section_D"
 		orbit_angle = 30
 		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
 		
 		init_effect = {
-			surveyed = {
-				set_surveyed = yes
-				surveyor = FROM
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = THIS
 			}
 		}
 	}
-		
+	
 	planet = {
-		class = "pc_ringworld_tech"
+		class = "pc_ringworld_tech_damaged"
 		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = THIS
+			}
+		}
 	}
 	
 	planet = {
@@ -209,31 +224,5 @@ ancient_survived_ringworld = {
 		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
-		
-		init_effect = {
-			surveyed = {
-				set_surveyed = yes
-				surveyor = FROM
-			}
-		}
-	}
-	
-	init_effect = {
-		spawn_megastructure = {
-			type = "ring_world_ruined"
-			orbit_angle = 270
-			orbit_distance = 45
-			location = planet
-		}
-	}
-	
-	neighbor_system = {
-		distance = { min = 10 max = @distance }
-		initializer = "neighbor_t1"
-	}
-	
-	neighbor_system = {
-		distance = { min = 10 max = @distance }	
-		initializer = "neighbor_t1_first_colony"
 	}
 }
