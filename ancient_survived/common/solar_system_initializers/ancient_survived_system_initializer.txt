@@ -72,7 +72,7 @@ ancient_survived_system_initializer = {
 }
 
 ancient_survived_ringworld = {
-	class = "sc_g"
+	class = "rl_standard_stars"
 	asteroids_distance = 150
 	flags = { empire_home_system ancient_survived_system }
 	
@@ -98,7 +98,7 @@ ancient_survived_ringworld = {
 	change_orbit = 45
 		
 	planet = {
-		name = "Segment-A"
+		name = "NAME_Ring_Section_A"
 		class = "pc_ringworld_habitable"
 		size = 25
 		orbit_distance = 0
@@ -117,85 +117,114 @@ ancient_survived_ringworld = {
 	
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Segment-B"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Segment-C"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0		
 	}
 	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "Segment-D"
+		name = "NAME_Ring_Section_B"
 		orbit_angle = 30
 		orbit_distance = 0
 		tile_blockers = none
 		modifiers = none
+		
+		init_effect = {
+			generate_ancient_survived_ruins = yes	
+		}
 	}
 	
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Segment-E"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Segment-F"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "Segment-G"
+		name = "NAME_Ring_Section_C"
 		orbit_angle = 30
 		orbit_distance = 0
 		tile_blockers = none
 		modifiers = none
+		
+		init_effect = {
+			generate_ancient_survived_ruins = yes	
+		}
 	}
 	
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Segment-H"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Segment-I"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "Segment-J"
+		name = "NAME_Ring_Section_D"
 		orbit_angle = 30
 		orbit_distance = 0
-		tile_blockers = none
-		modifiers = none
+		
+		init_effect = {
+			surveyed = {
+				set_surveyed = yes
+				surveyor = FROM
+			}
+		}
 	}
-	
+		
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Segment-K"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
 	}
 	
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Segment-L"
+		name = "NAME_Ring_Section"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			surveyed = {
+				set_surveyed = yes
+				surveyor = FROM
+			}
+		}
+	}
+	
+	init_effect = {
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 270
+			orbit_distance = 45
+			location = planet
+		}
 	}
 	
 	neighbor_system = {
