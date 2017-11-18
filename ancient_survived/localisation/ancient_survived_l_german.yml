@@ -2,6 +2,8 @@
  
  ancient_survived_system_initializer_NAME:0 "Uralte Zuflucht"
  ancient_survived_system_initializer_DESC:0 "Ein System, welches als Zuflucht einer gefallenen Zivilisation dient. Stasiskammern auf dem bewohnbaren Planet halten eine ansonsten ausgestorbene Spezies am Leben."
+ ancient_survived_ringworld_NAME:0 "Uralte Ringwelt"
+ ancient_survived_ringworld_DESC:0 "Überlebene einer gefallenen Zivilisation auf einer Ringwelt mit 3 bewohnbaren und 1 beschädigten Segmenten."
  
  building_ancient_survived_lab:0 "Forschungsmatrix"
  building_ancient_survived_lab_desc:0 "Ein Backupsystem eines ehemals riesigen Forschungsnetwerks mit einer Vielzahl von Daten früheren wissenschaftlichen Durchbrüchen."

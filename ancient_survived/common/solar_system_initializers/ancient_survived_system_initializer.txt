@@ -70,3 +70,159 @@ ancient_survived_system_initializer = {
 		}
 	}
 }
+
+ancient_survived_ringworld = {
+	class = "rl_standard_stars"
+	asteroids_distance = 150
+	flags = { empire_home_system ancient_survived_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+	}
+
+	change_orbit = 45
+	
+	planet = {
+		name = "NAME_Ring_Section_A"
+		class = "pc_ringworld_habitable"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 25
+		has_ring = no
+		starting_planet = yes
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_ringworld_habitable"
+			generate_start_buildings_and_blockers = yes	
+		}
+
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_Ring_Section_B"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			generate_ancient_survived_ruins = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "NAME_Ring_Section_C"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			generate_ancient_survived_ruins = yes
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam_damaged"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = THIS
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_habitable_damaged"
+		name = "NAME_Ring_Section_D"
+		orbit_angle = 30
+		orbit_distance = 0
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = THIS
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_tech_damaged"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		init_effect = {
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = THIS
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_Ring_Section"
+		orbit_angle = 30
+		orbit_distance = 0
+	}
+}

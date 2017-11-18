@@ -76,6 +76,27 @@ replace_all_infrastructure = {
 	}
 }
 
+generate_ancient_survived_ruins = {
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no }
+			set_blocker = tb_ancient_survived_ruins
+		}
+	}
+	random_tile = {
+		limit = { has_blocker = no }
+		set_blocker = tb_crater
+	}
+	while = {
+		count = 3
+		random_tile = {
+			limit = { has_blocker = no }
+			set_blocker = tb_ancient_cryo_chambers
+		}
+	}
+}
+
 ### TECHS ###
 
 # Gives most vanilla techs to the current scope's country (usual techs)
