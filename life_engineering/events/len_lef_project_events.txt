@@ -277,19 +277,19 @@ planet_event = {
 		every_tile = {
 			if = {
 				limit = {
-					has_building = "len_building_lef_project_primitives_stone_age"
+					has_building = len_building_lef_project_primitives_stone_age
 				}
 				PREV = { set_planet_flag = stone_age }
 			}
 			if = {
 				limit = {
-					has_building = "len_building_lef_project_primitives_late_medieval_age"
+					has_building = len_building_lef_project_primitives_late_medieval_age
 				}
 				PREV = { set_planet_flag = late_medieval_age }
 			}
 			if = {
 				limit = {
-					has_building = "len_building_lef_project_primitives_industrial_age"
+					has_building = len_building_lef_project_primitives_industrial_age
 				}
 				PREV = { set_planet_flag = industrial_age }
 			}

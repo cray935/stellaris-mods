@@ -82,9 +82,13 @@
  len_lef_project_events.8.desc:0 "The science center on [ROOT.GetName] initiated a project to form a primitive society on this planet. Our experts indoctrinate the population to forget their memories of former life. It will take some time but they will become primitives in the process."
  
  len_primitive_survivors.10.name:0 "Hibernating population"
- len_primitive_survivors.10.desc:0 "The primitives project does well on [ROOT.GetName]. The plaque destroyed"
- len_primitive_survivors.110.name:0 ""
- len_primitive_survivors.110.desc:0 ""
+ len_primitive_survivors.10.desc:0 "The primitives project does well on [ROOT.GetName]. The population has been set into stasis and most of their memories of their former life will be replaced with primitive minds. The stasis will last around a decade. The population will then awake as citizens of a primitive world."
+ len_primitive_survivors.110.name:0 "Stone Age Awakening"
+ len_primitive_survivors.110.desc:0 "The primitives project on [ROOT.GetName] has been completed now. The population awakens from stasis and start their new life in the Stone Age."
+ len_primitive_survivors.120.name:0 "Late Medieval Age Awakening"
+ len_primitive_survivors.120.desc:0 "The primitives project on [ROOT.GetName] has been completed now. The population awakens from stasis and start their new life in the Late Medieval Age."
+ len_primitive_survivors.130.name:0 "Industrial Age Awakening"
+ len_primitive_survivors.130.desc:0 "The primitives project on [ROOT.GetName] has been completed now. The population awakens from stasis and start their new life in the Industrial Age."
  
  # ##################################
  # Edicts
