@@ -5,9 +5,9 @@ After about a year of trial-and-error and reverse-engineering of the vanilla Ste
 
 All released mods are published at [Steam's Workshop](http://steamcommunity.com/id/cray935/myworkshopfiles/?appid=281990). 
 ## Released mods
-Mod-Name | Mod-Version | Game-Version
---- | :---: | :---:
-Planetary Extermination | 1.2.7 | 1.9.*
-Life Engineering | 1.9.5 | 1.9.*
-Forgiveable Ascension | 1.1.0 | 1.9.*
-Survived through Ages | 1.2.0 | 1.9.*
+Mod-Name | Game-Version
+--- | :---:
+Planetary Extermination | 1.9.*
+Life Engineering | 1.9.*
+Forgiveable Ascension | 1.9.*
+Survived through Ages | 1.9.*
