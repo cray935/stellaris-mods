@@ -4,7 +4,6 @@ len_building_life_engineering_facility = {
 	
 	base_buildtime = 360
 	planet_unique = yes
-	icon = "building_clone_vats"
 	
 	cost = {
 		minerals = 200
