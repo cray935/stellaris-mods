@@ -360,7 +360,6 @@ len_building_life_seed = {
 # Life Engineering Hive
 len_building_hive = {
 	
-	icon = "building_hive_ruins"
 	is_listed = no
 	requires_pop = no
 	
@@ -374,7 +373,6 @@ len_building_hive = {
 # Life Engineering Hive Reservoir
 len_building_hive_reservoir = {
 	
-	icon = "building_hive_ruins"
 	base_buildtime = 360
 	is_listed = no
 	requires_pop = no
