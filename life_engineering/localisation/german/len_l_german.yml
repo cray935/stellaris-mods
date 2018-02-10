@@ -5,7 +5,7 @@
  # ##################################
  
  len_tech_life_engineering:0 "Life Engineering"
- len_tech_life_engineering_desc:0 "With these techniques we can engineer life of pre-sentient state. Now we can send out our scientists to populate foreign worlds with adapted species."
+ len_tech_life_engineering_desc:0 "With these techniques we can engineer life of pre-sapient state. Now we can send out our scientists to populate foreign worlds with adapted species."
  len_tech_society_engineering:0 "Society Engineering"
  len_tech_society_engineering_desc:0 "After learning how to create life we can improve the procedure to create primitive but sentient species."
  len_tech_society_uplift:0 "Society Uplifting"
@@ -18,7 +18,7 @@
  # ##################################
  
  len_create_pre_sentient:0 "Create Pre-Sentients"
- len_create_pre_sentient_desc:0 "Allows our scientists to engineer pre-sentient species on uncolonised worlds."
+ len_create_pre_sentient_desc:0 "Allows our scientists to engineer pre-sapient species on uncolonised worlds."
  len_create_pre_ftl:0 "Create Primitives"
  len_create_pre_ftl_desc:0 "Allows our scientists to engineer primitive species on uncolonised worlds."
  len_society_uplift:0 "Advance primitive societies"
@@ -41,7 +41,7 @@
  # Special Projects
  # ##################################
  
- len_project_life_engineering:0 "Engineer pre-sentient life"
+ len_project_life_engineering:0 "Engineer pre-sapient life"
  len_project_life_engineering_DESC:0 "Our scientists will develop a simple species. The species will fit into the environment perfectly."
  
  len_project_society_engineering:0 "Engineer primitive life"
@@ -56,13 +56,17 @@
  
  len_life_engineering.1.name:0 "Life Engineering Opportunity"
  len_life_engineering.1.desc:0 "Our scientists think they can deploy new life here. Should we prepare a project?"
- len_life_engineering.1.a:0 "Yes, prepare the planet for deploying §Ypre-sentient§! life."
- len_life_engineering.1.b:0 "Yes, prepare the planet for deploying §Yprimitive§! life."
+ len_life_engineering.1.a:0 "Yes, prepare the planet for deploying §Ypre-sapient§! life."
+ len_life_engineering.1.b:0 "Yes, prepare the planet for deploying §Ystone age primitives§!."
  len_life_engineering.1.abort:0 "No, do not prepare any projects here."
  len_life_engineering.11.name:0 "Species created"
- len_life_engineering.11.desc:0 "Our scientists finished the engineering of the pre-sentient species on §Y[len_species_planet.GetName]§!. Our lead engineer calls them [len_species.GetName] and recommends to uplift these creatures to integrate them in our society."
- len_life_engineering.101.name:0 "Primitives created"
+ len_life_engineering.11.desc:0 "Our scientists finished the engineering of the pre-sapient species on §Y[len_species_planet.GetName]§!. Our lead engineer calls them [len_species.GetName] and recommends to uplift these creatures to integrate them in our society."
+ len_life_engineering.101.name:0 "Primitives created (Stone Age)"
  len_life_engineering.101.desc:0 "Our scientists finished the engineering of the primitive alien proto-civilization on §Y[len_species_planet.GetName]§!. They report that their Neolithic culture has mastered fire and developed a rudimentary spoken language, hopefully they will develop their society soon.\n\nWe should consider building an §YObservation Post§! above their world to study them more closely."
+ len_life_engineering.102.name:0 "Primitives created (Late Medieval Age)"
+ len_life_engineering.102.desc:0 "Our scientists finished the engineering of the primitive alien proto-civilization on §Y[len_species_planet.GetName]§!. They report that their Neolithic culture has mastered fire and developed a rudimentary spoken language, hopefully they will develop their society soon.\n\nWe should consider building an §YObservation Post§! above their world to study them more closely."
+ len_life_engineering.103.name:0 "Primitives created (Industrial Age)"
+ len_life_engineering.103.desc:0 "Our scientists finished the engineering of the primitive alien proto-civilization on §Y[len_species_planet.GetName]§!. They report that their Neolithic culture has mastered fire and developed a rudimentary spoken language, hopefully they will develop their society soon.\n\nWe should consider building an §YObservation Post§! above their world to study them more closely."
  
  len_life_seed_events.2.name:0 "Maturing life seeds"
  len_life_seed_events.2.desc:0 "The $len_building_life_engineering_facility$ on §Y[ROOT.GetName]§! has reported that all $len_building_life_seed$s are fully grown into mature environments. This is an important milestone in the Life Engineering Project on the planet. We can now activate our devices to finalize the project."
