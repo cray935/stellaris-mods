@@ -14,6 +14,7 @@ country_event = {
 		give_all_common_techs = yes
 		give_ancient_building_techs = yes
 		give_zenith_techs = yes
+		give_life_engineering_techs = yes
 		
 		if = {
 			limit = { has_authority = auth_machine_intelligence }

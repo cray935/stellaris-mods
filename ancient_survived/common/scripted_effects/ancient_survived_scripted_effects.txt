@@ -455,3 +455,11 @@ give_zenith_techs = {
 	give_technology = { tech = "tech_advanced_plasma_launcher" message = no }
 	give_technology = { tech = "tech_mysterious_weapon" message = no }
 }
+
+# Gives most techs from "Life Engineering"
+give_life_engineering_techs = {
+	give_technology = { tech = "len_tech_life_engineering" message = no }
+	give_technology = { tech = "len_tech_society_engineering" message = no }
+	give_technology = { tech = "len_tech_society_uplift" message = no }
+	give_technology = { tech = "len_tech_promethean_project" message = no }
+}
