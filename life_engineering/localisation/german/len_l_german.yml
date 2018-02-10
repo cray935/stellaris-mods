@@ -58,6 +58,8 @@
  len_life_engineering.1.desc:0 "Our scientists think they can deploy new life here. Should we prepare a project?"
  len_life_engineering.1.a:0 "Yes, prepare the planet for deploying §Ypre-sapient§! life."
  len_life_engineering.1.b:0 "Yes, prepare the planet for deploying §Ystone age primitives§!."
+ len_life_engineering.1.c:0 "Yes, prepare the planet for deploying §Ymedieval primitives§!."
+ len_life_engineering.1.d:0 "Yes, prepare the planet for deploying §Yindustrial primitives§!."
  len_life_engineering.1.abort:0 "No, do not prepare any projects here."
  len_life_engineering.11.name:0 "Species created"
  len_life_engineering.11.desc:0 "Our scientists finished the engineering of the pre-sapient species on §Y[len_species_planet.GetName]§!. Our lead engineer calls them [len_species.GetName] and recommends to uplift these creatures to integrate them in our society."
