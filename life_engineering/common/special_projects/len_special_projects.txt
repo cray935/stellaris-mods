@@ -2,7 +2,7 @@
 # Develop pre-sentient life
 special_project = {
 	key = "len_project_life_engineering"
-	cost = 300
+	cost = 5000
 	timelimit = 90
 	tech_department = society_technology
 	picture = GFX_evt_microscopic_life
@@ -26,7 +26,7 @@ special_project = {
 # Develop primitive life
 special_project = {
 	key = "len_project_society_engineering"
-	cost = 500
+	cost = 8000
 	timelimit = 90
 	tech_department = society_technology
 	picture = GFX_evt_alien_cavemen
