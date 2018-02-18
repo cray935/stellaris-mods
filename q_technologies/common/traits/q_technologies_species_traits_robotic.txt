@@ -90,6 +90,7 @@ trait_robot_domestic_protocols_2 = {
 
 trait_robot_superconductive_2 = {
 	cost = 2
+	opposites = { "trait_robot_superconductive" }
 
 	allowed_archetypes = { ROBOT MACHINE }
 
