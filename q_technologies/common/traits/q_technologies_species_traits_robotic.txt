@@ -1,0 +1,236 @@
+trait_robot_power_drills_2 = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		tile_resource_minerals_mult = 0.20
+	}
+}
+
+trait_robot_harvesters_2 = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT }
+
+	modifier = {
+		tile_resource_food_mult = 0.20
+	}
+}
+
+trait_robot_efficient_processors_2 = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_robot_upkeep_mult = -0.20
+	}
+}
+
+trait_robot_logic_engines_2 = {
+	cost = 4
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	opposites = { trait_robotic_1 } # Droid, Synth and Machine only
+
+	modifier = {
+		tile_resource_society_research_mult = 0.20
+		tile_resource_physics_research_mult = 0.20
+		tile_resource_engineering_research_mult = 0.20
+	}
+}
+
+trait_robot_loyalty_circuits_2 = {
+	cost = 4
+
+	allowed_archetypes = { ROBOT }
+
+	opposites = { trait_robotic_2 trait_robotic_1 } # Synth only
+	
+	species_potential_add = {
+		from = {
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+
+	modifier = {
+		pop_happiness = 0.10
+		pop_government_ethic_attraction = 1.00
+	}
+}
+
+trait_robot_domestic_protocols_2 = {
+	cost = 2
+	
+	initial = no
+	randomized = no
+
+	allowed_archetypes = { ROBOT }
+	
+	species_potential_add = {
+		from = {
+			NOT = { has_policy_flag = ai_full_rights }
+		}
+	}
+
+	opposites = { trait_robotic_1 } # Droid and Synth only
+
+	modifier = {
+		pop_owner_happiness = 0.10
+	}
+}
+
+trait_robot_superconductive_2 = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		tile_resource_energy_mult = 0.20
+	}
+}
+
+trait_robot_double_jointed_2 = {
+	cost = 2
+	opposites = { "trait_robot_bulky" "trait_robot_bulky_2" }
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		pop_resettlement_cost_mult = -1.00
+	}
+}
+
+trait_robot_bulky_2 = {
+	cost = -2
+	opposites = { "trait_robot_double_jointed" "trait_robot_double_jointed_2" }
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		pop_resettlement_cost_mult = 1.00
+	}
+}
+
+trait_robot_enhanced_memory_2 = {
+	cost = 4
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		leader_skill_levels = 4
+	}
+}
+
+trait_robot_emotion_emulators_2 = {
+	cost = 2
+	opposites = { "trait_robot_uncanny" "trait_robot_uncanny_2" }
+	allowed_archetypes = { MACHINE }
+	custom_tooltip = TRAIT_EMOTION_EMULATORS_EFFECT
+}
+
+trait_robot_uncanny_2 = {
+	cost = -2
+	opposites = { "trait_robot_emotion_emulators" "trait_robot_emotion_emulators_2" }
+	allowed_archetypes = { MACHINE }
+	custom_tooltip = TRAIT_UNCANNY_EFFECT
+}
+
+trait_robot_durable_2 = {
+	cost = 2
+	opposites = { "trait_robot_high_maintenance" "trait_robot_high_maintenance_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_consumer_goods_mult = -0.50
+	}
+}
+
+trait_robot_high_maintenance_2 = {
+	cost = -2
+	opposites = { "trait_robot_durable" "trait_robot_durable_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_consumer_goods_mult = 0.50
+	}
+}
+
+trait_robot_learning_algorithms_2 = {
+	cost = 2
+	opposites = { "trait_robot_repurposed_hardware" "trait_robot_repurposed_hardware_2" }
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		species_leader_exp_gain = 0.50
+	}
+}
+
+trait_robot_repurposed_hardware_2 = {
+	cost = -2
+	opposites = { "trait_robot_learning_algorithms" "trait_robot_learning_algorithms_2" }
+
+	allowed_archetypes = { MACHINE }
+
+	modifier = {
+		species_leader_exp_gain = -0.50
+	}
+}
+
+trait_robot_mass_produced_2 = {
+	cost = 2
+	opposites = { "trait_robot_custom_made" "trait_robot_custom_made_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_robot_build_speed_mult = 0.50
+	}
+}
+
+trait_robot_custom_made_2 = {
+	cost = -2
+	opposites = { "trait_robot_mass_produced" "trait_robot_mass_produced_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_robot_build_speed_mult = -0.50
+	}
+}
+trait_robot_recycled_2 = {
+	cost = 4
+	opposites = { "trait_robot_luxurious" "trait_robot_luxurious_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_robot_build_cost_mult = -0.40
+	}
+}
+
+trait_robot_luxurious_2 = {
+	cost = -4
+	opposites = { "trait_robot_recycled" "trait_robot_recycled_2" }
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		pop_robot_build_cost_mult = 0.40
+	}
+}
+
+trait_robot_propaganda_machines_2 = {
+	cost = 2
+
+	allowed_archetypes = { ROBOT }
+
+	modifier = {
+		tile_resource_unity_mult = 0.30
+	}
+}

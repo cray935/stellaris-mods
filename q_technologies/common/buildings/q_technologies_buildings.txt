@@ -1,0 +1,560 @@
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+@natural_equilibrium_happiness = 0.02
+
+### Q-Core and Labs
+
+building_q_corelab = {
+	base_buildtime = @b1time
+	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		unity = @b0effect
+	}
+	
+	required_resources = {
+		energy = @b0upkeep
+	}
+	
+	upgrades = {
+		building_q_corelab_phys
+		building_q_corelab_soc
+		building_q_corelab_eng
+	}	
+	
+	prerequisites = {
+		"tech_q_techs"
+	}	
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no		
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			from = {
+				count_tile = {
+					count < 4
+					limit = { 
+						OR = {
+							has_building = building_q_corelab
+							has_building = building_q_corelab_phys
+							has_building = building_q_corelab_soc
+							has_building = building_q_corelab_eng
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+building_q_corelab_phys = {
+	base_buildtime = @b4time
+	is_listed = no
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+			}
+			custom_tooltip = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			custom_tooltip = {
+				text = "requires_building_machine_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_machine_capital_1"
+						has_building = "building_machine_capital_2"
+						has_building = "building_machine_capital_3"
+					}
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		unity = @b1effect
+		physics_research = @science3
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	planet_modifier = {
+		tile_resource_physics_research_mult = 0.10
+	}
+		
+	prerequisites = {
+		"tech_q_techs"
+	}
+}
+
+building_q_corelab_soc = {
+	base_buildtime = @b4time
+	is_listed = no
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+			}
+			custom_tooltip = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			custom_tooltip = {
+				text = "requires_building_machine_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_machine_capital_1"
+						has_building = "building_machine_capital_2"
+						has_building = "building_machine_capital_3"
+					}
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		unity = @b1effect
+		society_research = @science3
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	planet_modifier = {
+		tile_resource_society_research_mult = 0.10
+	}
+		
+	prerequisites = {
+		"tech_q_techs"
+	}
+}
+
+building_q_corelab_eng = {
+	base_buildtime = @b4time
+	is_listed = no
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+			}
+			custom_tooltip = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			custom_tooltip = {
+				text = "requires_building_machine_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_machine_capital_1"
+						has_building = "building_machine_capital_2"
+						has_building = "building_machine_capital_3"
+					}
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		unity = @b1effect
+		engineering_research = @science3
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	planet_modifier = {
+		tile_resource_engineering_research_mult = 0.10
+	}
+		
+	prerequisites = {
+		"tech_q_techs"
+	}
+}
+
+### Q-Research Institute and Departments
+
+building_q_research_institute = {
+	base_buildtime = @b4time
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	allow = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_authority = auth_machine_intelligence }
+				}
+			}
+			custom_tooltip = {
+				text = "requires_building_capital_2"
+				planet = {
+					OR = {
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			custom_tooltip = {
+				text = "requires_building_machine_capital_2"
+				planet = {
+					OR = {
+						has_building = "building_machine_capital_2"
+						has_building = "building_machine_capital_3"
+					}
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		physics_research = @science3
+		society_research = @science3
+		engineering_research = @science3
+	}
+	
+	required_resources = {
+		energy = @b4upkeep
+	}
+	
+	adjacency_bonus = {
+		tile_resource_physics_research_add = 1
+		tile_resource_society_research_add = 1
+		tile_resource_engineering_research_add = 1
+	}
+		
+	prerequisites = {
+		"tech_q_institutes"
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no		
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_q_research_dept_phys = {
+	base_buildtime = @b5time
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_machine_capital_2"
+				has_building = "building_machine_capital_3"
+			}
+		}
+	}
+	
+	allow = {
+		planet = {
+			has_building = "building_q_research_institute"
+		}
+	}
+	
+	produced_resources = {
+		physics_research = @science5
+		unity = @b1effect
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	adjacency_bonus = {
+		tile_resource_physics_research_add = 1
+	}
+		
+	prerequisites = {
+		"tech_q_departments"
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no		
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_q_research_dept_soc = {
+	base_buildtime = @b5time
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_machine_capital_2"
+				has_building = "building_machine_capital_3"
+			}
+		}
+	}
+	
+	allow = {
+		planet = {
+			has_building = "building_q_research_institute"
+		}
+	}
+	
+	produced_resources = {
+		society_research = @science5
+		unity = @b1effect
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	adjacency_bonus = {
+		tile_resource_society_research_add = 1
+	}
+		
+	prerequisites = {
+		"tech_q_departments"
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no		
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_q_research_dept_eng = {
+	base_buildtime = @b5time
+	is_planet_unique = yes
+	
+	cost = {
+		minerals = @b5cost
+	}
+	
+	potential = {
+		planet = {
+			OR = {
+				has_building = "building_capital_2"
+				has_building = "building_capital_3"
+				has_building = "building_machine_capital_2"
+				has_building = "building_machine_capital_3"
+			}
+		}
+	}
+	
+	allow = {
+		planet = {
+			has_building = "building_q_research_institute"
+		}
+	}
+	
+	produced_resources = {
+		engineering_research = @science5
+		unity = @b1effect
+	}
+	
+	required_resources = {
+		energy = @b5upkeep
+	}
+	
+	adjacency_bonus = {
+		tile_resource_engineering_research_add = 1
+	}
+		
+	prerequisites = {
+		"tech_q_departments"
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no		
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
