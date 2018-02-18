@@ -122,6 +122,7 @@ trait_robot_bulky_2 = {
 
 trait_robot_enhanced_memory_2 = {
 	cost = 4
+	opposites = { "trait_robot_enhanced_memory" }
 
 	allowed_archetypes = { MACHINE }
 
