@@ -17,7 +17,7 @@
  trait_robot_double_jointed_2:0 "$trait_robot_double_jointed$"
  trait_robot_double_jointed_2_desc:0 "$trait_robot_double_jointed_desc$"
  trait_robot_bulky_2:0 "$trait_robot_bulky$"
- trait_robot_bulky_desc_2:0 "$trait_robot_bulky_desc$"
+ trait_robot_bulky_2_desc_2:0 "$trait_robot_bulky_desc$"
  trait_robot_enhanced_memory_2:0 "$trait_robot_enhanced_memory$"
  trait_robot_enhanced_memory_2_desc:0 "$trait_robot_enhanced_memory_desc$"
  trait_robot_emotion_emulators_2:0 "$trait_robot_emotion_emulators$"
