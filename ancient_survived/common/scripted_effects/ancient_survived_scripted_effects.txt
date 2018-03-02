@@ -103,6 +103,8 @@ generate_ancient_survived_ruins = {
 give_all_common_techs = {
 	give_technology = { tech = "tech_databank_uplinks" message = no }
 	give_technology = { tech = "tech_improved_databank_uplinks" message = no }
+	give_technology = { tech = "tech_curator_lab" message = no }
+	give_technology = { tech = "tech_archeology_lab" message = no }
 	give_technology = { tech = "tech_physics_lab_1" message = no }
 	give_technology = { tech = "tech_physics_lab_2" message = no }
 	give_technology = { tech = "tech_physics_lab_3" message = no }
@@ -115,37 +117,35 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_sapient_ai" message = no }
 	give_technology = { tech = "tech_combat_computers_1" message = no }
 	give_technology = { tech = "tech_combat_computers_2" message = no }
+	give_technology = { tech = "tech_auxiliary_fire_control" message = no }
 	give_technology = { tech = "tech_synchronized_defences" message = no }
 	give_technology = { tech = "tech_fusion_power" message = no }
 	give_technology = { tech = "tech_cold_fusion_power" message = no }
 	give_technology = { tech = "tech_antimatter_power" message = no }
 	give_technology = { tech = "tech_zero_point_power" message = no }
-	give_technology = { tech = "tech_shields_1" message = no }
+	give_technology = { tech = "tech_reactor_boosters_2" message = no }
+	give_technology = { tech = "tech_reactor_boosters_3" message = no }
 	give_technology = { tech = "tech_shields_2" message = no }
 	give_technology = { tech = "tech_shields_3" message = no }
 	give_technology = { tech = "tech_shields_4" message = no }
 	give_technology = { tech = "tech_shields_5" message = no }
 	give_technology = { tech = "tech_shield_rechargers_1" message = no }
-	give_technology = { tech = "tech_shield_recharge_aura_1" message = no }
 	give_technology = { tech = "tech_planetary_shield_generator" message = no }
 	give_technology = { tech = "tech_sensors_2" message = no }
 	give_technology = { tech = "tech_sensors_3" message = no }
 	give_technology = { tech = "tech_sensors_4" message = no }
-	give_technology = { tech = "tech_orbital_sensor_array" message = no }
 	give_technology = { tech = "tech_power_plant_2" message = no }
 	give_technology = { tech = "tech_power_plant_3" message = no }
 	give_technology = { tech = "tech_power_plant_4" message = no }
-	give_technology = { tech = "tech_solar_panel_network" message = no }
 	give_technology = { tech = "tech_power_hub_1" message = no }
 	give_technology = { tech = "tech_power_hub_2" message = no }
 	give_technology = { tech = "tech_hyper_drive_2" message = no }
 	give_technology = { tech = "tech_hyper_drive_3" message = no }
-	give_technology = { tech = "tech_hyperlane_mapping" message = no }
-	give_technology = { tech = "tech_warp_drive_1" message = no }
-	give_technology = { tech = "tech_warp_drive_2" message = no }
-	give_technology = { tech = "tech_warp_drive_3" message = no }
-	give_technology = { tech = "tech_aura_quantum_destabilizer" message = no }
-	give_technology = { tech = "tech_lasers_1" message = no }
+	give_technology = { tech = "tech_wormhole_stabilization" message = no }
+	give_technology = { tech = "tech_gateway_activation" message = no }
+	give_technology = { tech = "tech_gateway_construction" message = no }
+	give_technology = { tech = "tech_ftl_inhibitor" message = no }
+	give_technology = { tech = "tech_matter_generator" message = no }
 	give_technology = { tech = "tech_lasers_2" message = no }
 	give_technology = { tech = "tech_lasers_3" message = no }
 	give_technology = { tech = "tech_lasers_4" message = no }
@@ -165,7 +165,20 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_pd_tracking_1" message = no }
 	give_technology = { tech = "tech_pd_tracking_2" message = no }
 	give_technology = { tech = "tech_pd_tracking_3" message = no }
-	give_technology = { tech = "tech_mass_drivers_1" message = no }
+	give_technology = { tech = "tech_robomodding_m" message = no }
+	give_technology = { tech = "tech_robomodding" message = no }
+	give_technology = { tech = "tech_robomodding_points_1" message = no }
+	give_technology = { tech = "tech_robomodding_points_2" message = no }
+	give_technology = { tech = "tech_probability_theory" message = no }
+	give_technology = { tech = "tech_binary_motivators" message = no }
+	give_technology = { tech = "tech_nanite_assemblers" message = no }
+	give_technology = { tech = "tech_adaptive_combat_algorithms" message = no }
+	give_technology = { tech = "tech_biomechanics" message = no }
+	give_technology = { tech = "tech_singularity_core" message = no }
+	give_technology = { tech = "tech_modular_components" message = no }
+	give_technology = { tech = "tech_intelligent_factories" message = no }
+	give_technology = { tech = "tech_dark_matter_deflector" message = no }
+	give_technology = { tech = "tech_dark_matter_power_core" message = no }
 	give_technology = { tech = "tech_mass_drivers_2" message = no }
 	give_technology = { tech = "tech_mass_drivers_3" message = no }
 	give_technology = { tech = "tech_mass_drivers_4" message = no }
@@ -179,7 +192,7 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_autocannons_3" message = no }
 	give_technology = { tech = "tech_flak_batteries_1" message = no }
 	give_technology = { tech = "tech_flak_batteries_2" message = no }
-	give_technology = { tech = "tech_missiles_1" message = no }
+	give_technology = { tech = "tech_flak_batteries_3" message = no }
 	give_technology = { tech = "tech_missiles_2" message = no }
 	give_technology = { tech = "tech_missiles_3" message = no }
 	give_technology = { tech = "tech_missiles_4" message = no }
@@ -189,10 +202,27 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_torpedoes_1" message = no }
 	give_technology = { tech = "tech_torpedoes_2" message = no }
 	give_technology = { tech = "tech_torpedoes_3" message = no }
+	give_technology = { tech = "tech_pk_cracker" message = no }
+	give_technology = { tech = "tech_pk_shielder" message = no }
+	give_technology = { tech = "tech_pk_neutron" message = no }
+	give_technology = { tech = "tech_pk_godray" message = no }
+	give_technology = { tech = "tech_pk_nanobots" message = no }
+	give_technology = { tech = "tech_hydroponics" message = no }
+	give_technology = { tech = "tech_gene_crops" message = no }
+	give_technology = { tech = "tech_nano_vitality_crops" message = no }
+	give_technology = { tech = "tech_nutrient_replication" message = no }
 	give_technology = { tech = "tech_biolab_1" message = no }
 	give_technology = { tech = "tech_biolab_2" message = no }
 	give_technology = { tech = "tech_biolab_3" message = no }
 	give_technology = { tech = "tech_alien_life_studies" message = no }
+	give_technology = { tech = "tech_colonization_2" message = no }
+	give_technology = { tech = "tech_colonization_3" message = no }
+	give_technology = { tech = "tech_colonization_4" message = no }
+	give_technology = { tech = "tech_colonization_5" message = no }
+	give_technology = { tech = "tech_tomb_world_adaption" message = no }
+	give_technology = { tech = "tech_space_trading" message = no }
+	give_technology = { tech = "tech_frontier_health" message = no }
+	give_technology = { tech = "tech_frontier_hospital" message = no }
 	give_technology = { tech = "tech_tb_mountain_range" message = no }
 	give_technology = { tech = "tech_tb_volcano" message = no }
 	give_technology = { tech = "tech_tb_dangerous_wildlife" message = no }
@@ -203,22 +233,42 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_tb_toxic_kelp" message = no }
 	give_technology = { tech = "tech_tb_deep_sinkhole" message = no }
 	give_technology = { tech = "tech_terrestrial_sculpting" message = no }
-	give_technology = { tech = "tech_atmospheric_manipulation" message = no }
 	give_technology = { tech = "tech_ecological_adaptation" message = no }
 	give_technology = { tech = "tech_climate_restoration" message = no }
-	give_technology = { tech = "tech_gaia_creation" message = no }
+	give_technology = { tech = "tech_genome_mapping" message = no }
+	give_technology = { tech = "tech_vitality_boosters" message = no }
+	give_technology = { tech = "tech_epigenetic_triggers" message = no }
+	give_technology = { tech = "tech_cloning" message = no }
+	give_technology = { tech = "tech_gene_banks" message = no }
+	give_technology = { tech = "tech_gene_seed_purification" message = no }
+	give_technology = { tech = "tech_morphogenetic_field_mastery" message = no }
+	give_technology = { tech = "tech_gene_tailoring" message = no }
+	give_technology = { tech = "tech_glandular_acclimation" message = no }
+	give_technology = { tech = "tech_gene_expressions" message = no }
+	give_technology = { tech = "tech_selected_lineages" message = no }
+	give_technology = { tech = "tech_capacity_boosters" message = no }
+	give_technology = { tech = "tech_regenerative_hull_tissue" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_1" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_2" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_3" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_4" message = no }
 	give_technology = { tech = "tech_doctrine_fleet_size_5" message = no }
 	give_technology = { tech = "tech_interstellar_fleet_traditions" message = no }
-	give_technology = { tech = "tech_doctrine_fleet_support" message = no }
-	give_technology = { tech = "tech_doctrine_command_matrix" message = no }
-	give_technology = { tech = "tech_doctrine_refit_standards" message = no }
+	give_technology = { tech = "tech_refit_standards" message = no }
+	give_technology = { tech = "tech_command_matrix" message = no }
+	give_technology = { tech = "tech_doctrine_navy_size_1" message = no }
+	give_technology = { tech = "tech_doctrine_navy_size_2" message = no }
+	give_technology = { tech = "tech_doctrine_navy_size_3" message = no }
+	give_technology = { tech = "tech_doctrine_navy_size_4" message = no }
 	give_technology = { tech = "tech_centralized_command" message = no }
 	give_technology = { tech = "tech_combat_training" message = no }
+	give_technology = { tech = "tech_ground_defense_planning" message = no }
+	give_technology = { tech = "tech_global_defense_grid" message = no }
+	give_technology = { tech = "tech_psionic_theory" message = no }
+	give_technology = { tech = "tech_telepathy" message = no }
+	give_technology = { tech = "tech_precognition_interface" message = no }
 	give_technology = { tech = "tech_galactic_ambitions" message = no }
+	give_technology = { tech = "tech_manifest_destiny" message = no }
 	give_technology = { tech = "tech_interstellar_campaigns" message = no }
 	give_technology = { tech = "tech_galactic_campaigns" message = no }
 	give_technology = { tech = "tech_planetary_unification" message = no }
@@ -232,25 +282,45 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_galactic_bureaucracy" message = no }
 	give_technology = { tech = "tech_living_state" message = no }
 	give_technology = { tech = "tech_collective_self" message = no }
+	give_technology = { tech = "tech_autonomous_agents" message = no }
+	give_technology = { tech = "tech_embodied_dynamism" message = no }
 	give_technology = { tech = "tech_neural_implants" message = no }
 	give_technology = { tech = "tech_artificial_moral_codes" message = no }
 	give_technology = { tech = "tech_synthetic_thought_patterns" message = no }
-	give_technology = { tech = "tech_will_to_power" message = no }
-	give_technology = { tech = "tech_cultural_heritage" message = no }
 	give_technology = { tech = "tech_heritage_site" message = no }
 	give_technology = { tech = "tech_hypercomms_forum" message = no }
 	give_technology = { tech = "tech_autocurating_vault" message = no }
-	give_technology = { tech = "tech_spaceport_2" message = no }
-	give_technology = { tech = "tech_spaceport_3" message = no }
-	give_technology = { tech = "tech_spaceport_4" message = no }
-	give_technology = { tech = "tech_spaceport_5" message = no }
-	give_technology = { tech = "tech_spaceport_6" message = no }
-	give_technology = { tech = "tech_cruiser_yard" message = no }
-	give_technology = { tech = "tech_battleship_yard" message = no }
+	give_technology = { tech = "tech_holographic_rituals" message = no }
+	give_technology = { tech = "tech_consecration_fields" message = no }
+	give_technology = { tech = "tech_transcendent_faith" message = no }
+	give_technology = { tech = "tech_ascension_theory" message = no }
+	give_technology = { tech = "tech_ascension_theory_apoc" message = no }
+	give_technology = { tech = "tech_destroyers" message = no }
+	give_technology = { tech = "tech_cruisers" message = no }
+	give_technology = { tech = "tech_battleships" message = no }
+	give_technology = { tech = "tech_titans" message = no }
+	give_technology = { tech = "tech_corvette_build_speed" message = no }
+	give_technology = { tech = "tech_corvette_hull_1" message = no }
+	give_technology = { tech = "tech_corvette_hull_2" message = no }
+	give_technology = { tech = "tech_destroyer_build_speed" message = no }
+	give_technology = { tech = "tech_destroyer_hull_1" message = no }
+	give_technology = { tech = "tech_destroyer_hull_2" message = no }
+	give_technology = { tech = "tech_cruiser_build_speed" message = no }
+	give_technology = { tech = "tech_cruiser_hull_1" message = no }
+	give_technology = { tech = "tech_cruiser_hull_2" message = no }
+	give_technology = { tech = "tech_battleship_build_speed" message = no }
+	give_technology = { tech = "tech_battleship_hull_1" message = no }
+	give_technology = { tech = "tech_battleship_hull_2" message = no }
+	give_technology = { tech = "tech_titan_hull_1" message = no }
+	give_technology = { tech = "tech_titan_hull_2" message = no }
+	give_technology = { tech = "tech_starbase_3" message = no }
+	give_technology = { tech = "tech_starbase_4" message = no }
+	give_technology = { tech = "tech_starbase_5" message = no }
+	give_technology = { tech = "tech_modular_engineering" message = no }
+	give_technology = { tech = "tech_space_defense_station_improvement" message = no }
 	give_technology = { tech = "tech_strike_craft_1" message = no }
 	give_technology = { tech = "tech_strike_craft_2" message = no }
 	give_technology = { tech = "tech_strike_craft_3" message = no }
-	give_technology = { tech = "tech_ship_armor_1" message = no }
 	give_technology = { tech = "tech_ship_armor_2" message = no }
 	give_technology = { tech = "tech_ship_armor_3" message = no }
 	give_technology = { tech = "tech_ship_armor_4" message = no }
@@ -258,9 +328,7 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_thrusters_2" message = no }
 	give_technology = { tech = "tech_thrusters_3" message = no }
 	give_technology = { tech = "tech_thrusters_4" message = no }
-	give_technology = { tech = "tech_space_defense_station_2" message = no }
-	give_technology = { tech = "tech_space_defense_station_3" message = no }
-	give_technology = { tech = "tech_space_defense_station_improvement" message = no }
+	give_technology = { tech = "tech_defense_platform_hull_1" message = no }
 	give_technology = { tech = "tech_powered_exoskeletons" message = no }
 	give_technology = { tech = "tech_mining_network_2" message = no }
 	give_technology = { tech = "tech_mining_network_3" message = no }
@@ -270,8 +338,12 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_engineering_lab_1" message = no }
 	give_technology = { tech = "tech_engineering_lab_2" message = no }
 	give_technology = { tech = "tech_engineering_lab_3" message = no }
+	give_technology = { tech = "tech_robotic_workers" message = no }
+	give_technology = { tech = "tech_droid_workers" message = no }
+	give_technology = { tech = "tech_synthetic_leaders" message = no }
 	give_technology = { tech = "tech_afterburners_1" message = no }
 	give_technology = { tech = "tech_afterburners_2" message = no }
+	give_technology = { tech = "tech_construction_templates" message = no }
 	give_technology = { tech = "tech_mega_engineering" message = no }
 	give_technology = { tech = "tech_mine_garanthium" message = no }
 	give_technology = { tech = "tech_lythuric_gas" message = no }
