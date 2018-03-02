@@ -37,8 +37,6 @@
 @tier3weight3 = 40
 @tier3weight4 = 35
 
-@len_tech_life_engineering_POINTS = 1
-
 # ##################
 # Create Life
 # ##################
@@ -59,16 +57,9 @@ len_tech_life_engineering = {
 	modifier = {
 		description = tech_gene_tailoring_modifier_desc
 		description_parameters = {
-			POINTS = @len_tech_life_engineering_POINTS
+			POINTS = 1
 		}
-		HUM_species_trait_points_add = @len_tech_life_engineering_POINTS
-		MAM_species_trait_points_add = @len_tech_life_engineering_POINTS
-		REP_species_trait_points_add = @len_tech_life_engineering_POINTS
-		AVI_species_trait_points_add = @len_tech_life_engineering_POINTS
-		ART_species_trait_points_add = @len_tech_life_engineering_POINTS
-		MOL_species_trait_points_add = @len_tech_life_engineering_POINTS
-		FUN_species_trait_points_add = @len_tech_life_engineering_POINTS
-		PLANT_species_trait_points_add = @len_tech_life_engineering_POINTS
+		BIOLOGICAL_species_trait_points_add = 1
 	}
 	
 	weight_modifier = {

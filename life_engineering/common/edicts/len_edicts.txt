@@ -2,7 +2,7 @@
 # Planetary Edict to prevent pop growth
 planet_edict = {
 	name = "len_edict_prevent_growth"
-	influence_cost = 0
+	cost = { influence = 0 }
 	
 	potential = {
 		has_building = "len_building_life_engineering_facility"
@@ -19,7 +19,7 @@ planet_edict = {
 # Planetary Edict to undo prevent pop growth
 planet_edict = {
 	name = "len_edict_undo_prevent_growth"
-	influence_cost = 0
+	cost = { influence = 0 }
 	
 	potential = {	
 		has_modifier = len_prevent_growth
@@ -35,8 +35,7 @@ planet_edict = {
 # Edict to disable the science ship event
 country_edict = {
 	name = "len_edict_prevent_life_engineering_event"
-	
-	influence_cost = 0
+	cost = { influence = 0 }
 	
 	potential = {
 		has_technology = len_tech_life_engineering
