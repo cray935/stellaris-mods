@@ -36,6 +36,7 @@ planet_edict = {
 country_edict = {
 	name = "len_edict_prevent_life_engineering_event"
 	cost = { influence = 0 }
+	length = 3600
 	
 	potential = {
 		has_technology = len_tech_life_engineering
