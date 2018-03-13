@@ -202,11 +202,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_torpedoes_1" message = no }
 	give_technology = { tech = "tech_torpedoes_2" message = no }
 	give_technology = { tech = "tech_torpedoes_3" message = no }
-	give_technology = { tech = "tech_pk_cracker" message = no }
-	give_technology = { tech = "tech_pk_shielder" message = no }
-	give_technology = { tech = "tech_pk_neutron" message = no }
-	give_technology = { tech = "tech_pk_godray" message = no }
-	give_technology = { tech = "tech_pk_nanobots" message = no }
 	give_technology = { tech = "tech_hydroponics" message = no }
 	give_technology = { tech = "tech_gene_crops" message = no }
 	give_technology = { tech = "tech_nano_vitality_crops" message = no }
@@ -298,7 +293,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_destroyers" message = no }
 	give_technology = { tech = "tech_cruisers" message = no }
 	give_technology = { tech = "tech_battleships" message = no }
-	give_technology = { tech = "tech_titans" message = no }
 	give_technology = { tech = "tech_corvette_build_speed" message = no }
 	give_technology = { tech = "tech_corvette_hull_1" message = no }
 	give_technology = { tech = "tech_corvette_hull_2" message = no }
@@ -413,6 +407,12 @@ give_synthetic_dawn_machine_only_techs = {
 	give_technology = { tech = "tech_singularity_core" message = no }
 	give_technology = { tech = "tech_modular_components" message = no }
 	give_technology = { tech = "tech_intelligent_factories" message = no }
+}
+
+### APOCALYPSE ###
+
+give_apocalypse_techs = {
+	give_technology = { tech = "tech_titans" message = no }
 }
 
 ### MODS ###

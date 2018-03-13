@@ -31,6 +31,11 @@ country_event = {
 			give_synthetic_dawn_not_gestalt_techs = yes
 		}
 		
+		if = {
+			limit = { host_has_dlc = "Apocalypse" }
+			give_apocalypse_techs = yes
+		}
+		
 		add_energy = 5000
 		add_minerals = 5000
 		add_food = 5000
