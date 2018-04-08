@@ -535,3 +535,35 @@ give_life_engineering_techs = {
 	give_technology = { tech = "len_tech_society_uplift" message = no }
 	give_technology = { tech = "len_tech_promethean_project" message = no }
 }
+
+# Gives most techs from "Stellar Expansion"
+give_stellar_expansion_techs = {
+	give_technology = { tech = "tech_cofh_se_orbital_mineral_processing" message = no }
+	give_technology = { tech = "tech_cofh_se_research_consortiums" message = no }
+	give_technology = { tech = "tech_cofh_se_protocol_droids" message = no }
+	give_technology = { tech = "tech_cofh_se_orbital_drop_pods" message = no }
+	give_technology = { tech = "tech_cofh_se_inertial_compensators" message = no }
+	give_technology = { tech = "tech_cofh_se_deep_scan" message = no }
+	give_technology = { tech = "tech_cofh_se_fast_scan" message = no }
+	give_technology = { tech = "tech_cofh_se_battlefield_leadership" message = no }
+	give_technology = { tech = "tech_cofh_se_military_logistics" message = no }
+	give_technology = { tech = "tech_cofh_se_fleet_support" message = no }
+	give_technology = { tech = "tech_cofh_se_galactic_prominence" message = no }
+	give_technology = { tech = "tech_cofh_se_psi_diplomatic_corps" message = no }
+	give_technology = { tech = "tech_cofh_se_xeno_confidence" message = no }
+	give_technology = { tech = "tech_cofh_se_xeno_negotiation" message = no }
+}
+
+give_stellar_expansion_cloning_techs = {
+	give_technology = { tech = "tech_cofh_se_mass_cloning" message = no }
+}
+
+give_stellar_expansion_terra_techs = {
+	give_technology = { tech = "tech_cofh_se_atmospheric_purification" message = no }
+	give_technology = { tech = "tech_cofh_se_atmosphere_creation" message = no }
+}
+
+give_stellar_expansion_terra_ex_techs = {
+	give_technology = { tech = "tech_cofh_se_dynamo_manipulation" message = no }
+	give_technology = { tech = "tech_cofh_se_tectonic_restriction" message = no }
+}
