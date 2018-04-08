@@ -567,3 +567,9 @@ give_stellar_expansion_terra_ex_techs = {
 	give_technology = { tech = "tech_cofh_se_dynamo_manipulation" message = no }
 	give_technology = { tech = "tech_cofh_se_tectonic_restriction" message = no }
 }
+
+# Potent Rebellions
+give_ccrebel_techs = {
+	give_technology = { tech = "tech_ccrebel_unrest_1" message = no }
+	give_technology = { tech = "tech_ccrebel_unrest_2" message = no }
+}

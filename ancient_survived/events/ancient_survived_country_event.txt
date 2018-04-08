@@ -19,6 +19,7 @@ country_event = {
 		give_stellar_expansion_cloning_techs = yes
 		give_stellar_expansion_terra_techs = yes
 		give_stellar_expansion_terra_ex_techs = yes
+		give_ccrebel_techs = yes
 		
 		if = {
 			limit = { has_authority = auth_machine_intelligence }
