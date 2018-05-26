@@ -7,47 +7,57 @@
 ##################################################################################
 
 len_create_species = {
+	log = "start len_create_species"
 	if = {
 		limit = { has_planet_flag = len_species_random }
 		len_create_random = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_mam }
 		len_create_mam = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_rep }
 		len_create_rep = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_avi }
 		len_create_avi = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_art }
 		len_create_art = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_mol }
 		len_create_mol = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_fun }
 		len_create_fun = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_plant }
 		len_create_plant = yes
 	}
-	if = {
+	else_if = {
 		limit = { has_planet_flag = len_species_hum }
 		len_create_hum = yes
 	}
 	
 	len_cleanup_species_flags = yes
 	
-	last_created_species = { save_global_event_target_as = len_species }
+	last_created_species = { 
+		log = "last_created_species"
+		print_scope_effect = yes
+		save_global_event_target_as = len_species
+	}
+	event_target:len_species = {
+		log = "event_target:len_species"
+		print_scope_effect = yes
+	}
 	save_global_event_target_as = len_species_planet
+	log = "stop len_create_species"
 }
 
 len_create_random = {
@@ -67,20 +77,7 @@ len_create_random = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = random
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -89,10 +86,21 @@ len_create_random = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -114,20 +122,7 @@ len_create_mam = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = MAM
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -136,10 +131,21 @@ len_create_mam = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = MAM
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -161,20 +167,7 @@ len_create_rep = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = REP
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -183,10 +176,21 @@ len_create_rep = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = REP
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -208,20 +212,7 @@ len_create_avi = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = AVI
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -230,10 +221,21 @@ len_create_avi = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = AVI
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -255,20 +257,7 @@ len_create_art = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = ART
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -277,10 +266,21 @@ len_create_art = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = ART
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -302,20 +302,7 @@ len_create_fun = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = FUN
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -324,10 +311,21 @@ len_create_fun = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = FUN
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -349,20 +347,7 @@ len_create_mol = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = MOL
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -371,10 +356,21 @@ len_create_mol = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = MOL
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -397,20 +393,7 @@ len_create_plant = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = PLANT
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -419,10 +402,21 @@ len_create_plant = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = PLANT
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
@@ -444,20 +438,7 @@ len_create_hum = {
 					trait = random_traits
 				}
 			}
-			
-			else = {
-				create_species = {
-					name = random
-					class = HUM
-					portrait = random
-					homeworld = THIS
-					traits = {
-						trait = len_trait_engineered
-					}
-				}
-			}
 		}
-		
 		else = {
 			create_species = {
 				name = random
@@ -466,10 +447,21 @@ len_create_hum = {
 				homeworld = THIS
 				traits = {
 					trait = len_trait_engineered
-					trait = random_presapient_trait
 				}
-				sapient = no
 			}
+		}
+	}
+	else = {
+		create_species = {
+			name = random
+			class = HUM
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = len_trait_engineered
+				trait = random_presapient_trait
+			}
+			sapient = no
 		}
 	}
 }
