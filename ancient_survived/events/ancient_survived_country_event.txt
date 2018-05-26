@@ -86,4 +86,18 @@ country_event = {
 	option = {
 		name = ancient_survived_country_event.200.b
 	}
+	
+	option = {
+		name = ancient_survived_country_event.200.c
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ancient_survivor = no
+					is_country_type = default
+				}
+				country_event = { id = "ancient_survived_country_event.100" }
+				country_event = { id = "ancient_survived_country_event.110" }
+			}
+		}
+	}
 }

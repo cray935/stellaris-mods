@@ -19,4 +19,5 @@
  ancient_survived_country_event.200.desc:0 "Eure Spezies macht den Anschein, Ihr hättet die Vergangenheit überlebt. Darf ich fragen, seid Ihr alte Überlebende?"
  ancient_survived_country_event.200.a:0 "§GJa, sind wir.§!"
  ancient_survived_country_event.200.b:0 "§RNein, sind wir nicht.§!"
+ ancient_survived_country_event.200.c:0 "§YAlle sind Überlebende.§!"
  

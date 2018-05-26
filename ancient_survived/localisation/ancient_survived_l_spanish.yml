@@ -19,4 +19,5 @@ l_spanish:
  ancient_survived_country_event.200.desc:0 "Tu especie luce como una sobreviviente de épocas pasadas. Quizá deba preguntarte, ¿están listos para renacer?"
  ancient_survived_country_event.200.a:0 "§GLo estamos.§!"
  ancient_survived_country_event.200.b:0 "§RNo, no lo estamos.§!"
+ ancient_survived_country_event.200.c:0 "§YAll empires are.§!"
  

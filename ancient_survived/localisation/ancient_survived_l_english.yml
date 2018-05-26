@@ -19,4 +19,5 @@
  ancient_survived_country_event.200.desc:0 "Your species looks like it survived the past. May I ask you, are your ancient survivors?"
  ancient_survived_country_event.200.a:0 "§GYes, we are.§!"
  ancient_survived_country_event.200.b:0 "§RNo, we are not.§!"
+ ancient_survived_country_event.200.c:0 "§YAll empires are.§!"
  
