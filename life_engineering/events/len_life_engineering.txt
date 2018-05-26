@@ -168,7 +168,7 @@ country_event = {
 					free_pop_tiles > 0
 				}
 				best_tile_for_pop = {
-					create_pop = { species = last_created }
+					create_pop = { species = event_target:len_species }
 					pop = { 
 						set_pop_flag = fresh_engineered_pop
 					}
@@ -234,7 +234,7 @@ country_event = {
 					civic = civic_landed_nobility
 					civic = civic_flat_world_theory
 				}
-				species = last_created
+				species = event_target:len_species
 				ethos = random
 				flag = {
 					icon = {
