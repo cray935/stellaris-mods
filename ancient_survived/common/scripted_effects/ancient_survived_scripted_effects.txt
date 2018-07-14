@@ -288,8 +288,6 @@ give_all_common_techs = {
 	give_technology = { tech = "tech_holographic_rituals" message = no }
 	give_technology = { tech = "tech_consecration_fields" message = no }
 	give_technology = { tech = "tech_transcendent_faith" message = no }
-	give_technology = { tech = "tech_ascension_theory" message = no }
-	give_technology = { tech = "tech_ascension_theory_apoc" message = no }
 	give_technology = { tech = "tech_destroyers" message = no }
 	give_technology = { tech = "tech_cruisers" message = no }
 	give_technology = { tech = "tech_battleships" message = no }
