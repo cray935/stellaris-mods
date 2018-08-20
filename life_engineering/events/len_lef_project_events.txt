@@ -191,11 +191,11 @@ pop_event = {
 	immediate = {
 		planet = {
 			create_species = {
-				is_mod = yes
-				name = this
-				plural = this
-				class = this
-				portrait = this
+				is_mod = no
+				name = root
+				plural = root
+				class = root
+				portrait = root
 				traits = {
 					trait = len_trait_promethean
 				}
@@ -266,11 +266,7 @@ planet_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
-	trigger = {
-		has_planet_flag = len_lef_project_primitives_in_process
-	}
-	
+		
 	immediate = {
 		remove_planet_flag = len_lef_project_primitives_in_process
 		owner = { save_event_target_as = project_owner }
