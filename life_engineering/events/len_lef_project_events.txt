@@ -189,18 +189,16 @@ pop_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		planet = {
-			create_species = {
-				is_mod = no
-				name = root
-				plural = root
-				class = root
-				portrait = root
-				traits = {
-					trait = len_trait_promethean
-				}
-				homeworld = this
+		create_species = {
+			is_mod = yes
+			name = this
+			plural = this
+			class = this
+			portrait = this
+			traits = {
+				trait = len_trait_promethean
 			}
+			homeworld = planet
 		}
 		
 		change_species = last_created
