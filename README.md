@@ -1,3 +1,4 @@
+EOL - This repository is considered offline. It stays only here for you to take a look at the code of my pre-2.2 mods.
 # cray935' Stellaris mods
 This repository is my workspace for Stellaris mods.
 
